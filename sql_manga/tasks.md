@@ -197,6 +197,19 @@ Résultat attendu
 
 ### Réponse
 
+```sql
+SELECT
+	genres_manga.signification AS `genre`,
+    COUNT(mangas.num_manga) AS `nombre_de_manga_par_genre`
+FROM
+    `mangas`
+INNER JOIN genres_manga ON mangas.code_genre=genres_manga.code_genre
+GROUP BY
+    genres_manga.signification
+ORDER BY
+	nombre_de_manga_par_genre DESC;
+```
+
 ## Task 7
 
 ### Énoncé
