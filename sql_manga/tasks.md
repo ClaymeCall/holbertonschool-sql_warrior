@@ -346,6 +346,18 @@ Résultat attendu
 
 ### Réponse
 
+```sql
+SELECT
+	mangas.titre,
+    mangakas.prenom,
+    mangakas.nom,
+    mangakas.pays
+FROM
+	mangas
+INNER JOIN mangakas ON mangas.code_mangaka = mangakas.code_mangaka
+ORDER BY mangas.titre ASC;
+```
+
 ## Task 10
 
 ### Énoncé
