@@ -1,3 +1,5 @@
+USE tp_manga;
+
 INSERT INTO clients (code_client, titre, prenom, nom, adresse_rue, code_postal, ville, num_telephone, date_naissance, enfants) VALUES
 (1, 'Mme', 'Emma', 'Martin', '12 rue des Érables', '75011', 'Paris', '0611223344', '1990-04-15', 1),
 (2, 'M.', 'Lucas', 'Bernard', '8 avenue Victor Hugo', '69003', 'Lyon', '0622334455', '1985-09-22', 2),
