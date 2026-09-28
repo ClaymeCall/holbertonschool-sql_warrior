@@ -99,6 +99,10 @@ Résultat attendu
 
 ### Réponse
 
+```sql
+SELECT prenom, nom, ville FROM `clients` WHERE ville = 'Lyon' OR ville = 'Bordeaux';
+```
+
 ## Task 4
 
 ### Énoncé
