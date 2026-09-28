@@ -135,6 +135,10 @@ Résultat attendu
 
 ### Réponse
 
+```sql
+SELECT num_manga, titre FROM `mangas` WHERE titre LIKE '%Tome 1%';
+```
+
 ## Task 5
 
 ### Énoncé
