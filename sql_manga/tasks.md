@@ -402,6 +402,22 @@ Résultat attendu
 
 ### Réponse
 
+```sql
+SELECT
+	factures.num_facture,
+    clients.prenom,
+    clients.nom,
+    mangas.titre,
+    types_location.libelle,
+    table_location.date_retour
+FROM
+	factures
+INNER JOIN clients ON factures.code_client = clients.code_client
+INNER JOIN table_location ON factures.num_facture = table_location.num_facture
+INNER JOIN mangas ON table_location.num_manga = mangas.num_manga
+INNER JOIN types_location ON table_location.code_type = types_location.code_type;
+```
+
 ## Task 11
 
 ### Énoncé
