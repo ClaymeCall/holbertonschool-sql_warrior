@@ -292,6 +292,16 @@ Résultat attendu
 
 ### Réponse
 
+```sql
+SELECT
+    ville              AS `ville`,
+    COUNT(code_client) AS `nombre_de_clients`,
+    SUM(enfants)       AS `nombre_d_enfants`
+FROM clients
+GROUP BY ville
+ORDER BY ville ASC;
+```
+
 ## Task 9
 
 ### Énoncé
