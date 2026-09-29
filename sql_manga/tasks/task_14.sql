@@ -1,0 +1,23 @@
+-- Task 14
+--
+-- Instructions
+--
+--     Calculer le chiffre d’affaires par genre de manga.
+--     Trier du chiffre d’affaires le plus élevé au plus faible.
+--
+-- Résultat attendu
+--
+-- +---------------+------------------+
+-- | signification | chiffre_affaires |
+-- +---------------+------------------+
+-- | Horreur       |            18.00 |
+-- | Shōnen        |            14.11 |
+-- | Aventure      |            10.00 |
+-- | Policier      |            10.00 |
+-- | Seinen        |             9.24 |
+-- | Fantasy       |             7.44 |
+-- | Comédie       |             6.34 |
+-- | Shōjo         |             5.25 |
+-- +---------------+------------------+
+-- 8 rows in set (0.00 sec)
+

@@ -1,0 +1,22 @@
+-- Task 2
+--
+-- Instructions
+--
+--     Afficher les mangas sortis à partir de 2010.
+--     Afficher uniquement le titre, l’année et le prix de base.
+--     Trier les mangas par annee dans un ordre ascendant.
+--
+-- Résultat attendu
+--
+-- +---------------------------------+-------+-----------+
+-- | titre                           | annee | prix_base |
+-- +---------------------------------+-------+-----------+
+-- | L’Attaque des Titans - Tome 2   |  2010 |      2.80 |
+-- | Demon Slayer - Tome 1           |  2016 |      2.60 |
+-- | Demon Slayer - Tome 2           |  2017 |      2.60 |
+-- | Jujutsu Kaisen - Tome 1         |  2018 |      2.70 |
+-- | Jujutsu Kaisen - Tome 2         |  2019 |      2.70 |
+-- +---------------------------------+-------+-----------+
+-- 5 rows in set (0.00 sec)
+
+SELECT titre, annee, prix_base FROM `mangas` WHERE (annee >= 2010) ORDER BY annee ASC;

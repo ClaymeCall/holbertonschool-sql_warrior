@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON tp_manga.* TO 'student'@'%';
+FLUSH PRIVILEGES;

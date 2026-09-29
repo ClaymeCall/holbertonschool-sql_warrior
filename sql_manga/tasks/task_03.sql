@@ -1,0 +1,20 @@
+-- Task 3
+--
+-- Instructions
+--
+--     Afficher les clients habitant à Lyon ou à Bordeaux.
+--     Afficher le prénom, le nom et la ville.
+--
+-- Résultat attendu
+--
+-- +--------+---------+----------+
+-- | prenom | nom     | ville    |
+-- +--------+---------+----------+
+-- | Lucas  | Bernard | Lyon     |
+-- | Chloé  | Petit   | Lyon     |
+-- | Nathan | Durand  | Bordeaux |
+-- | Manon  | Laurent | Bordeaux |
+-- +--------+---------+----------+
+-- 4 rows in set (0.00 sec)
+
+SELECT prenom, nom, ville FROM `clients` WHERE ville = 'Lyon' OR ville = 'Bordeaux';

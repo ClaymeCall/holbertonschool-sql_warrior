@@ -1,0 +1,39 @@
+-- Task 18
+--
+-- Instructions
+--
+--     Ajouter un nouveau mangaka : Makoto Yukimura, né en 1976 au Japon, avec le code 13.
+--     Vérifier l'ajout du mangaka avec cette commande:
+--
+--     SELECT * FROM mangakas WHERE code_mangaka = 13;
+--
+-- Résultat attendu
+--
+-- +--------------+--------+----------+-----------------+-------+
+-- | code_mangaka | prenom | nom      | annee_naissance | pays  |
+-- +--------------+--------+----------+-----------------+-------+
+-- |           13 | Makoto | Yukimura |            1976 | Japon |
+-- +--------------+--------+----------+-----------------+-------+
+-- 1 row in set (0.00 sec)
+--
+--     Ajouter ensuite le manga « Vinland Saga - Tome 1 » avec:
+--         le numéro 25
+--         Makoto Yukimura comme mangaka
+--         un prix de base de 2.90 €
+--         le genre Historique
+--         l’année 2005
+--         une durée de 92 minutes
+--         descriptif: Thorfinn grandit dans un contexte de guerres vikings.
+--     Vérifier l'ajout du manga avec cette commande:
+--
+--     SELECT num_manga, titre, prix_base, code_mangaka, code_genre, annee, duree FROM mangas WHERE num_manga = 25;
+--
+-- Résultat attendu
+--
+-- +-----------+-----------------------+-----------+--------------+------------+-------+-------+
+-- | num_manga | titre                 | prix_base | code_mangaka | code_genre | annee | duree |
+-- +-----------+-----------------------+-----------+--------------+------------+-------+-------+
+-- |        25 | Vinland Saga - Tome 1 |      2.90 |           13 |         13 |  2005 |    92 |
+-- +-----------+-----------------------+-----------+--------------+------------+-------+-------+
+-- 1 row in set (0.00 sec)
+

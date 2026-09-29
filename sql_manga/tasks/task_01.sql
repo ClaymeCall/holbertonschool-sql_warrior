@@ -1,0 +1,40 @@
+-- Task 1
+--
+-- Instructions
+--
+--     Afficher tous les mangas avec leur numéro, leur titre, leur prix de base et leur année.
+--     Trier les résultats par titre.
+--
+-- Résultat attendu
+--
+-- +-----------+---------------------------------+-----------+-------+
+-- | num_manga | titre                           | prix_base | annee |
+-- +-----------+---------------------------------+-----------+-------+
+-- |        23 | Bakuman - Tome 1                |      2.20 |  2008 |
+-- |        24 | Bakuman - Tome 2                |      2.20 |  2009 |
+-- |        15 | Bleach - Tome 1                 |      2.30 |  2001 |
+-- |        16 | Bleach - Tome 2                 |      2.30 |  2002 |
+-- |        21 | Death Note - Tome 1             |      2.50 |  2003 |
+-- |        22 | Death Note - Tome 2             |      2.50 |  2004 |
+-- |        17 | Demon Slayer - Tome 1           |      2.60 |  2016 |
+-- |        18 | Demon Slayer - Tome 2           |      2.60 |  2017 |
+-- |         5 | Dragon Ball - Tome 1            |      2.00 |  1984 |
+-- |         6 | Dragon Ball - Tome 2            |      2.00 |  1985 |
+-- |        11 | Fullmetal Alchemist - Tome 1    |      2.40 |  2001 |
+-- |        12 | Fullmetal Alchemist - Tome 2    |      2.40 |  2002 |
+-- |        19 | Jujutsu Kaisen - Tome 1         |      2.70 |  2018 |
+-- |        20 | Jujutsu Kaisen - Tome 2         |      2.70 |  2019 |
+-- |         9 | L’Attaque des Titans - Tome 1   |      2.80 |  2009 |
+-- |        10 | L’Attaque des Titans - Tome 2   |      2.80 |  2010 |
+-- |         3 | Naruto - Tome 1                 |      2.20 |  1999 |
+-- |         4 | Naruto - Tome 2                 |      2.20 |  2000 |
+-- |         1 | One Piece - Tome 1              |      2.50 |  1997 |
+-- |         2 | One Piece - Tome 2              |      2.50 |  1998 |
+-- |        13 | Ranma 1/2 - Tome 1              |      1.90 |  1987 |
+-- |        14 | Ranma 1/2 - Tome 2              |      1.90 |  1988 |
+-- |         7 | Sailor Moon - Tome 1            |      2.10 |  1992 |
+-- |         8 | Sailor Moon - Tome 2            |      2.10 |  1993 |
+-- +-----------+---------------------------------+-----------+-------+
+-- 24 rows in set (0.01 sec)
+
+SELECT num_manga, titre, prix_base, annee FROM `mangas` ORDER BY titre;

@@ -1,0 +1,15 @@
+-- Task 20
+--
+-- Instructions
+--
+--     Affiche le nombre de location ayant le type de location « Retard régularisé »
+--
+-- Résultat attendu
+--
+-- +-----------+-----------------+
+-- | code_type | nb_utilisations |
+-- +-----------+-----------------+
+-- |        12 |               1 |
+-- +-----------+-----------------+
+-- 1 row in set (0.00 sec)
+

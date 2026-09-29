@@ -1,0 +1,37 @@
+-- Task 19
+--
+-- Instructions
+--
+--     Augmenter de 0.20 € le prix de base des mangas du genre Horreur.
+--     Vérifier le prix des mangas du genre Horreur avant l'augmentation des prix avec la commande:
+--
+-- SELECT m.num_manga, m.titre, m.prix_base, g.signification
+-- FROM mangas m
+-- JOIN genres_manga g ON g.code_genre = m.code_genre
+-- WHERE g.signification = 'Horreur';
+--
+-- Résultat attendu AVANT augmentation des prix
+--
+-- +-----------+-------------------------+-----------+---------------+
+-- | num_manga | titre                   | prix_base | signification |
+-- +-----------+-------------------------+-----------+---------------+
+-- |        17 | Demon Slayer - Tome 1   |      2.60 | Horreur       |
+-- |        18 | Demon Slayer - Tome 2   |      2.60 | Horreur       |
+-- |        19 | Jujutsu Kaisen - Tome 1 |      2.70 | Horreur       |
+-- |        20 | Jujutsu Kaisen - Tome 2 |      2.70 | Horreur       |
+-- +-----------+-------------------------+-----------+---------------+
+-- 4 rows in set (0.00 sec)
+--
+-- Résultat attendu APRES augmentation des prix
+--
+--     Vérifier les nouveaux prix aprés l'augmentation des prix avec la même commande SELECT ci-dessus.
+-- +-----------+-------------------------+-----------+---------------+
+-- | num_manga | titre                   | prix_base | signification |
+-- +-----------+-------------------------+-----------+---------------+
+-- |        17 | Demon Slayer - Tome 1   |      2.80 | Horreur       |
+-- |        18 | Demon Slayer - Tome 2   |      2.80 | Horreur       |
+-- |        19 | Jujutsu Kaisen - Tome 1 |      2.90 | Horreur       |
+-- |        20 | Jujutsu Kaisen - Tome 2 |      2.90 | Horreur       |
+-- +-----------+-------------------------+-----------+---------------+
+-- 4 rows in set (0.00 sec)
+
