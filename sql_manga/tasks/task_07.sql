@@ -41,4 +41,6 @@ INNER JOIN table_location ON factures.num_facture = table_location.num_facture
 INNER JOIN mangas ON table_location.num_manga = mangas.num_manga
 INNER JOIN types_location ON table_location.code_type = types_location.code_type
 GROUP BY
-    factures.num_facture;
+    factures.num_facture
+ORDER BY
+    factures.num_facture ASC;
