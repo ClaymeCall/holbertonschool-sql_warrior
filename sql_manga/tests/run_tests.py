@@ -110,6 +110,7 @@ def run_transaction(body, env):
         "mysql",
         f"-u{DB_USER}",
         f"-p{env['MYSQL_PASSWORD']}",
+        "--default-character-set=utf8mb4",
         "-B",
         "tp_manga",
     ]

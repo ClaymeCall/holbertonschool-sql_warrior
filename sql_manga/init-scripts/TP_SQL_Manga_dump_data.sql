@@ -1,3 +1,5 @@
+SET NAMES utf8mb4;
+
 USE tp_manga;
 
 INSERT INTO clients (code_client, titre, prenom, nom, adresse_rue, code_postal, ville, num_telephone, date_naissance, enfants) VALUES
