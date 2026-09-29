@@ -17,3 +17,18 @@
 -- +-------------------------+----------+---------+---------------+
 -- 4 rows in set (0.01 sec)
 
+SELECT
+  mangas.titre,
+  mangakas.prenom,
+  mangakas.nom,
+  genres_manga.signification
+FROM
+  mangas
+
+INNER JOIN mangakas ON mangas.code_mangaka = mangakas.code_mangaka
+INNER JOIN genres_manga ON mangas.code_genre = genres_manga.code_genre
+
+WHERE
+  genres_manga.signification = 'Horreur'
+
+ORDER BY mangas.titre ASC;
