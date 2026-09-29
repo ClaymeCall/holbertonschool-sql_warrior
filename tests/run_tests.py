@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
-"""Run tasks/task_NN.sql answers against MySQL and check output.
+"""Run a project's tasks/task_NN.sql answers against MySQL and check output.
 
 Usage:
-    python3 tests/run_tests.py            # run every task that has an answer
-    python3 tests/run_tests.py 5          # run only task 5
-    python3 tests/run_tests.py 1 3 7      # run tasks 1, 3 and 7
+    python3 tests/run_tests.py <project>            # run every task that has an answer
+    python3 tests/run_tests.py <project> 5          # run only task 5
+    python3 tests/run_tests.py <project> 1 3 7      # run tasks 1, 3 and 7
+
+<project> is a sibling project folder name, e.g. "sql_manga". Its database
+name is read from init-scripts/<project>_grants.sql at the repo root, so it
+never needs to be hardcoded here.
 
 Each task file is expected to contain:
     - A leading SQL-comment block ("-- ...") with the instructions and one
@@ -28,12 +32,11 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
-TASKS_DIR = ROOT / "tasks"
-ENV_FILE = ROOT / ".env"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+INIT_SCRIPTS_DIR = REPO_ROOT / "init-scripts"
+ENV_FILE = REPO_ROOT / ".env"
 CONTAINER = "mysql_dev"
 DB_USER = "student"
-DB_NAME = "ecolab_analyse"
 
 RED = "\033[31m"
 GREEN = "\033[32m"
@@ -50,6 +53,18 @@ def load_env(path):
         key, value = line.split("=", 1)
         env[key.strip()] = value.strip()
     return env
+
+
+def load_db_name(project):
+    grants_file = INIT_SCRIPTS_DIR / f"{project}_grants.sql"
+    if not grants_file.exists():
+        print(f"No such project: {project} (missing {grants_file})")
+        sys.exit(2)
+    match = re.search(r"GRANT ALL PRIVILEGES ON (\w+)\.", grants_file.read_text())
+    if not match:
+        print(f"Could not find a database name in {grants_file}")
+        sys.exit(2)
+    return match.group(1)
 
 
 def split_header_and_body(text):
@@ -104,16 +119,17 @@ def split_statements(body):
     return [s.strip() for s in body.split(";") if s.strip()]
 
 
-def run_transaction(body, env):
+def run_transaction(body, env, db_name):
     sql = f"START TRANSACTION;\n{body}\nROLLBACK;\n"
     cmd = [
         "docker", "exec", "-i", CONTAINER,
         "mysql",
+        "-h127.0.0.1",
         f"-u{DB_USER}",
         f"-p{env['MYSQL_PASSWORD']}",
         "--default-character-set=utf8mb4",
         "-B",
-        DB_NAME,
+        db_name,
     ]
     proc = subprocess.run(cmd, input=sql, capture_output=True, text=True)
     return proc.returncode, proc.stdout, proc.stderr
@@ -157,7 +173,7 @@ def compare(expected, actual, label):
     return diffs
 
 
-def run_task(path, env):
+def run_task(path, env, db_name):
     num = int(re.search(r"\d+", path.stem).group())
     text = path.read_text(encoding="utf-8")
     header, body = split_header_and_body(text)
@@ -178,7 +194,7 @@ def run_task(path, env):
         )
         return "skip"
 
-    returncode, stdout, stderr = run_transaction(body, env)
+    returncode, stdout, stderr = run_transaction(body, env, db_name)
     if returncode != 0:
         print(f"{RED}FAIL{RESET} task {num:02d}: query error")
         print(f"  {stderr.strip()}")
@@ -201,21 +217,33 @@ def run_task(path, env):
 
 
 def main():
+    args = sys.argv[1:]
+    if not args:
+        print(f"Usage: {sys.argv[0]} <project> [task_numbers...]")
+        sys.exit(2)
+
+    project, task_args = args[0], args[1:]
+    project_dir = REPO_ROOT / project
+    tasks_dir = project_dir / "tasks"
+    if not tasks_dir.is_dir():
+        print(f"No such project: {project} (missing {tasks_dir})")
+        sys.exit(2)
+
+    db_name = load_db_name(project)
     env = load_env(ENV_FILE)
 
-    args = sys.argv[1:]
-    if args:
-        paths = [TASKS_DIR / f"task_{int(n):02d}.sql" for n in args]
+    if task_args:
+        paths = [tasks_dir / f"task_{int(n):02d}.sql" for n in task_args]
         missing = [p for p in paths if not p.exists()]
         if missing:
             print(f"Unknown task file(s): {[str(p) for p in missing]}")
             sys.exit(2)
     else:
-        paths = sorted(TASKS_DIR.glob("task_*.sql"))
+        paths = sorted(tasks_dir.glob("task_*.sql"))
 
     results = {"pass": 0, "fail": 0, "skip": 0}
     for path in paths:
-        results[run_task(path, env)] += 1
+        results[run_task(path, env, db_name)] += 1
 
     total = sum(results.values())
     print(

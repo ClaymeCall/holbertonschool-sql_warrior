@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bring up the shared MySQL/phpMyAdmin stack (defined at the repo root).
+# All 5 projects' databases live in the same container; on a fresh volume
+# they're all seeded at once from the root init-scripts/ folder.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+docker compose up -d --wait

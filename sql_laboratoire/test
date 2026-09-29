@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Run this project's tasks against the shared MySQL container and check output.
+set -euo pipefail
+cd "$(dirname "$0")"
+project="$(basename "$PWD")"
+cd ..
+if command -v python3 >/dev/null 2>&1; then
+  exec python3 tests/run_tests.py "$project" "$@"
+else
+  exec devenv shell -- python3 tests/run_tests.py "$project" "$@"
+fi
