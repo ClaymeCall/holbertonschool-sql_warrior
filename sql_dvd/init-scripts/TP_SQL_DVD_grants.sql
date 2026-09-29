@@ -1,0 +1,2 @@
+GRANT ALL PRIVILEGES ON dvd.* TO 'student'@'%';
+FLUSH PRIVILEGES;

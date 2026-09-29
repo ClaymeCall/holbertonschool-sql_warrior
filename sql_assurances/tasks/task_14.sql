@@ -1,0 +1,15 @@
+-- Task 14
+--
+-- Instructions
+--
+--     Afficher l'assureur ayant le plus de contrats.
+--
+-- Resultat attendu
+--
+-- +---------------+---------------------+
+-- | nom           | nombre_de_contrats  |
+-- +---------------+---------------------+
+-- | AXA Assurance |                   3 |
+-- +---------------+---------------------+
+-- 1 row in set (0.00 sec)
+

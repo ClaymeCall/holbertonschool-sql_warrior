@@ -1,0 +1,39 @@
+-- Task 18 - Creer un statut lisible avec CASE
+--
+-- Instructions
+--
+--     Afficher chaque analyse avec son code echantillon.
+--     Afficher une colonne nommee statut_resultat.
+--     Le statut doit etre :
+--         - conforme si le resultat est conforme (valeur de conforme
+--           egale a 1 dans resultat_analyse)
+--         - non conforme si le resultat n'est pas conforme (valeur de
+--           conforme egale a 0 dans resultat_analyse)
+--         - en attente si aucun resultat n'existe (NULL)
+--
+-- Resultat attendu
+--
+-- +------------------+------------+-------------------+
+-- | code_echantillon | id_analyse | statut_resultat   |
+-- +------------------+------------+-------------------+
+-- | ECO-2025-001     |          1 | conforme          |
+-- | ECO-2025-001     |          1 | conforme          |
+-- | ECO-2025-002     |          2 | non conforme      |
+-- | ECO-2025-002     |          2 | conforme          |
+-- | ECO-2025-003     |          3 | en attente        |
+-- | ECO-2025-004     |          4 | conforme          |
+-- | ECO-2025-004     |          4 | conforme          |
+-- | ECO-2025-005     |          5 | en attente        |
+-- | ECO-2025-006     |          6 | en attente        |
+-- | ECO-2025-007     |          7 | non conforme      |
+-- | ECO-2025-007     |          7 | conforme          |
+-- | ECO-2025-008     |          8 | en attente        |
+-- | ECO-2025-009     |          9 | conforme          |
+-- | ECO-2025-009     |          9 | conforme          |
+-- | ECO-2025-010     |         10 | en attente        |
+-- | ECO-2025-011     |         11 | en attente        |
+-- | ECO-2025-012     |         12 | non conforme      |
+-- | ECO-2025-012     |         12 | conforme          |
+-- +------------------+------------+-------------------+
+-- 18 rows in set (0.00 sec)
+

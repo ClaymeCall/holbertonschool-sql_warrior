@@ -1,0 +1,20 @@
+-- Task 4 - Trouver les clientes dont le prenom commence par A
+--
+-- Instructions
+--
+--     Afficher toutes les clientes (Mme ou Mlle) dont le prenom commence
+--     par A.
+--     Trier par prenom.
+--
+-- Resultat attendu
+--
+-- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
+-- | id | code_client | civilite | prenom  | nom      | adresse              | code_postal | ville          | telephone  | date_naissance | abonne |
+-- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
+-- |  2 | C002        | Mme      | Alice   | Durand   | 8 avenue Victor Hugo | 44100       | Nantes         | 0240000002 | 1984-09-21     |      1 |
+-- |  4 | C004        | Mme      | Amelie  | Petit    | 19 rue Nationale     | 44300       | Nantes         | 0240000004 | 1992-07-30     |      1 |
+-- |  7 | C007        | Mlle     | Anais   | Simon    | 7 rue du Port        | 44600       | Saint-Nazaire  | 0240000007 | 2001-12-14     |      1 |
+-- | 11 | C011        | Mme      | Aurelie | Fournier | 1 impasse Verte      | 44800       | Saint-Herblain | 0240000011 | 1981-05-29     |      1 |
+-- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
+-- 4 rows in set (0.00 sec)
+

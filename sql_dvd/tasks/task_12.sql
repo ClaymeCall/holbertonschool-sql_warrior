@@ -1,0 +1,41 @@
+-- Task 12 - Afficher les DVD avec realisateur, pays et genre
+--
+-- Instructions
+--
+--     Afficher chaque DVD avec le nom, prenom, pays du realisateur et le
+--     genre.
+--     Utiliser les tables dvd, realisateurs et genres_film.
+--     Trier par titre de film (dvd).
+--
+-- Resultat attendu
+--
+-- +-------------------------------------+-----------+-------------+-------------+-----------------+
+-- | titre                                | nom       | prenom      | pays        | libelle_genre   |
+-- +-------------------------------------+-----------+-------------+-------------+-----------------+
+-- | Alien                                | Scott     | Ridley      | ROYAUME-UNI | Horreur         |
+-- | Avatar                               | Cameron   | James       | CANADA      | Science-fiction |
+-- | Delicatessen                         | Jeunet    | Jean-Pierre | FRANCE      | Comédie         |
+-- | Fight Club                           | Fincher   | David       | ETATS-UNIS  | Drame           |
+-- | Impitoyable                          | Eastwood  | Clint       | ETATS-UNIS  | Western         |
+-- | Inception                            | Nolan     | Christopher | ROYAUME-UNI | Science-fiction |
+-- | Indiana Jones                        | Spielberg | Steven      | ETATS-UNIS  | Aventure        |
+-- | Interstellar                         | Nolan     | Christopher | ROYAUME-UNI | Science-fiction |
+-- | Jurassic Park                        | Spielberg | Steven      | ETATS-UNIS  | Aventure        |
+-- | Kill Bill                            | Tarantino | Quentin     | ETATS-UNIS  | Action          |
+-- | Le Fabuleux Destin d Amelie Poulain  | Jeunet    | Jean-Pierre | FRANCE      | Comédie         |
+-- | Le Grand Bleu                        | Besson    | Luc         | FRANCE      | Drame           |
+-- | Le Voyage de Chihiro                 | Miyazaki  | Hayao       | JAPON       | Animation       |
+-- | Les Ailes du Desir                   | Wenders   | Wim         | ALLEMAGNE   | Drame           |
+-- | Les Temps modernes                   | Chaplin   | Charlie     | ROYAUME-UNI | Comédie         |
+-- | Metropolis                           | Lang      | Fritz       | ALLEMAGNE   | Science-fiction |
+-- | Mon Voisin Totoro                    | Miyazaki  | Hayao       | JAPON       | Animation       |
+-- | Paris Texas                          | Wenders   | Wim         | ALLEMAGNE   | Drame           |
+-- | Pulp Fiction                         | Tarantino | Quentin     | ETATS-UNIS  | Thriller        |
+-- | Sans toit ni loi                     | Varda     | Agnes       | FRANCE      | Drame           |
+-- | Seven                                | Fincher   | David       | ETATS-UNIS  | Policier        |
+-- | Titanic                              | Cameron   | James       | CANADA      | Romance         |
+-- | Total Recall                         | Verhoeven | Paul        | PAYS-BAS    | Science-fiction |
+-- | Tout sur ma mere                     | Almodovar | Pedro       | ESPAGNE     | Drame           |
+-- +-------------------------------------+-----------+-------------+-------------+-----------------+
+-- 24 rows in set (0.01 sec)
+

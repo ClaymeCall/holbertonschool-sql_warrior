@@ -1,0 +1,58 @@
+-- Task 8
+--
+-- Instructions
+--
+--     L'objectif de cet exercice est de mesurer l'utilisation reelle des
+--     vehicules.
+--
+--     Calculer le taux moyen de remplissage de chaque vehicule en fonction :
+--         - du nombre d'employes ayant utilise le vehicule,
+--         - et du nombre maximal de places disponibles dans ce vehicule.
+--
+--     Explication metier
+--     Chaque type de vehicule possede une capacite maximale (une citadine
+--     -> 4 places, un SUV -> 5 places, un utilitaire -> 2 places, etc.,
+--     regarder les donnees de la BDD pour en savoir plus). Lorsqu'un
+--     deplacement est enregistre, plusieurs employes peuvent partager le
+--     meme vehicule et chaque employe occupe une place. Le taux de
+--     remplissage permet donc de savoir si les vehicules sont sous-utilises,
+--     correctement utilises, ou presque pleins.
+--
+--     Formule a utiliser :
+--         Taux de remplissage = (nombre total d'employes ayant utilise le
+--         vehicule / nombre de places) x 100
+--
+--     Ce qui est attendu, pour chaque vehicule :
+--         - afficher son modele,
+--         - afficher son nombre de places,
+--         - afficher le taux de remplissage en suivant ces guidelines:
+--             - compter le nombre total d'employes ayant effectue un
+--               deplacement avec ce vehicule,
+--             - calculer le pourcentage d'occupation,
+--             - arrondir le resultat a 2 decimales.
+--
+--     Attention aux noms des colonnes, ils doivent etre identiques au
+--     resultat attendu ci-dessous.
+--     Attention a l'ordre dans lequel les donnees sont affichees : ca doit
+--     etre identique au resultat attendu ci-dessous.
+--
+-- Resultat attendu
+--
+-- +-------------------+----------+-------------------+
+-- | modele            | nbplaces | taux_remplissage  |
+-- +-------------------+----------+-------------------+
+-- | Peugeot 208       |        4 |             50.00 |
+-- | Ford Transit      |        2 |             50.00 |
+-- | Mercedes Vito     |        7 |             42.86 |
+-- | Toyota Rav4       |        5 |             40.00 |
+-- | Volkswagen Tiguan |        5 |             40.00 |
+-- | Fiat Panda        |        4 |             25.00 |
+-- | Dacia Duster      |        5 |             20.00 |
+-- | Renault Clio      |        4 |              0.00 |
+-- | Citroen C3        |        4 |              0.00 |
+-- | Opel Vivaro       |        2 |              0.00 |
+-- | Hyundai Tucson    |        5 |              0.00 |
+-- | Peugeot Expert    |        2 |              0.00 |
+-- +-------------------+----------+-------------------+
+-- 12 rows in set (0.01 sec)
+

@@ -1,0 +1,31 @@
+-- Task 1 - Lister les clients
+--
+-- Instructions
+--
+--     Afficher nom, prenom, ville depuis la table clients.
+--     Trier les resultats par nom croissant.
+--
+-- Resultat attendu
+--
+-- +----------+---------+----------------+
+-- | nom      | prenom  | ville          |
+-- +----------+---------+----------------+
+-- | Bernard  | Julien  | Nantes         |
+-- | Blanc    | Antoine | Toulouse       |
+-- | Durand   | Alice   | Nantes         |
+-- | Faure    | Kevin   | Strasbourg     |
+-- | Fournier | Aurelie | Saint-Herblain |
+-- | Garcia   | Claire  | Nantes         |
+-- | Girard   | Nicolas | Lyon           |
+-- | Laurent  | Hugo    | Paris          |
+-- | Leroy    | Marc    | Rennes         |
+-- | Martin   | Paul    | Nantes         |
+-- | Mercier  | Laura   | Reze           |
+-- | Moreau   | Sophie  | Angers         |
+-- | Petit    | Amelie  | Nantes         |
+-- | Robin    | Julie   | Nantes         |
+-- | Roux     | Thomas  | Bordeaux       |
+-- | Simon    | Anais   | Saint-Nazaire  |
+-- +----------+---------+----------------+
+-- 16 rows in set (0.00 sec)
+

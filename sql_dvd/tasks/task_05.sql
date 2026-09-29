@@ -1,0 +1,20 @@
+-- Task 5 - Trouver les clients nes dans les annees 70
+--
+-- Instructions
+--
+--     Afficher les clients nes entre le 1er janvier 1970 et le 31
+--     decembre 1979.
+--     Trier par date de naissance.
+--
+-- Resultat attendu
+--
+-- +----+-------------+----------+---------+---------+-----------------+-------------+----------+------------+----------------+--------+
+-- | id | code_client | civilite | prenom  | nom     | adresse         | code_postal | ville    | telephone  | date_naissance | abonne |
+-- +----+-------------+----------+---------+---------+-----------------+-------------+----------+------------+----------------+--------+
+-- | 14 | C014        | M.       | Antoine | Blanc   | 6 rue des Pins  | 31000       | Toulouse | 0561000014 | 1971-04-04     |      1 |
+-- |  3 | C003        | M.       | Julien  | Bernard | 5 rue Pasteur   | 44200       | Nantes   | 0240000003 | 1972-01-08     |      0 |
+-- |  6 | C006        | Mme      | Sophie  | Moreau  | 22 rue Carnot   | 49000       | Angers   | 0241000006 | 1975-03-02     |      1 |
+-- | 10 | C010        | M.       | Thomas  | Roux    | 16 rue Gambetta | 33000       | Bordeaux | 0556000010 | 1979-10-05     |      0 |
+-- +----+-------------+----------+---------+---------+-----------------+-------------+----------+------------+----------------+--------+
+-- 4 rows in set (0.00 sec)
+

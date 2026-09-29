@@ -1,0 +1,25 @@
+-- Task 6 - Trouver les DVD de moins de deux heures
+--
+-- Instructions
+--
+--     Afficher les DVD dont la duree est strictement inferieure a 120
+--     minutes.
+--     Afficher titre et duree_minutes, tries du plus court au plus long.
+--
+-- Resultat attendu
+--
+-- +--------------------+---------------+
+-- | titre               | duree_minutes |
+-- +--------------------+---------------+
+-- | Mon Voisin Totoro   |            86 |
+-- | Les Temps modernes  |            87 |
+-- | Delicatessen        |            99 |
+-- | Tout sur ma mere    |           101 |
+-- | Sans toit ni loi    |           105 |
+-- | Kill Bill           |           111 |
+-- | Total Recall        |           113 |
+-- | Indiana Jones       |           115 |
+-- | Alien               |           117 |
+-- +--------------------+---------------+
+-- 9 rows in set (0.00 sec)
+

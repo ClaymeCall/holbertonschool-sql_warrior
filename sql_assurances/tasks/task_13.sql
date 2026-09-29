@@ -1,0 +1,16 @@
+-- Task 13
+--
+-- Instructions
+--
+--     Afficher les employes n'ayant jamais effectue de deplacement.
+--
+-- Resultat attendu
+--
+-- +-----+---------+--------+
+-- | id  | nom     | prenom |
+-- +-----+---------+--------+
+-- | 203 | BERNARD | Emma   |
+-- | 213 | DIALLO  | Amina  |
+-- +-----+---------+--------+
+-- 2 rows in set (0.00 sec)
+

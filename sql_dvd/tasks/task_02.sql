@@ -1,0 +1,39 @@
+-- Task 2 - Lister les DVD par titre
+--
+-- Instructions
+--
+--     Afficher titre et annee_sortie depuis dvd.
+--     Trier les resultats par titre croissant.
+--
+-- Resultat attendu
+--
+-- +-------------------------------------+--------------+
+-- | titre                                | annee_sortie |
+-- +-------------------------------------+--------------+
+-- | Alien                                |         1979 |
+-- | Avatar                               |         2009 |
+-- | Delicatessen                         |         1991 |
+-- | Fight Club                           |         1999 |
+-- | Impitoyable                          |         1992 |
+-- | Inception                            |         2010 |
+-- | Indiana Jones                        |         1981 |
+-- | Interstellar                         |         2014 |
+-- | Jurassic Park                        |         1993 |
+-- | Kill Bill                            |         2003 |
+-- | Le Fabuleux Destin d Amelie Poulain  |         2001 |
+-- | Le Grand Bleu                        |         1988 |
+-- | Le Voyage de Chihiro                 |         2001 |
+-- | Les Ailes du Desir                   |         1987 |
+-- | Les Temps modernes                   |         1936 |
+-- | Metropolis                           |         1927 |
+-- | Mon Voisin Totoro                    |         1988 |
+-- | Paris Texas                          |         1984 |
+-- | Pulp Fiction                         |         1994 |
+-- | Sans toit ni loi                     |         1985 |
+-- | Seven                                |         1995 |
+-- | Titanic                              |         1997 |
+-- | Total Recall                         |         1990 |
+-- | Tout sur ma mere                     |         1999 |
+-- +-------------------------------------+--------------+
+-- 24 rows in set (0.00 sec)
+

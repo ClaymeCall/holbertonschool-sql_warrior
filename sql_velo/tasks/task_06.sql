@@ -1,0 +1,17 @@
+-- Task 6
+--
+-- Instructions
+--
+--     Afficher les locations actives.
+--     Afficher uniquement les colonnes mentionnees dans Resultat attendu.
+--
+-- Resultat attendu
+--
+-- +----+--------+
+-- | id | statut |
+-- +----+--------+
+-- |  2 | active |
+-- |  5 | active |
+-- +----+--------+
+-- 2 rows in set (0.00 sec)
+

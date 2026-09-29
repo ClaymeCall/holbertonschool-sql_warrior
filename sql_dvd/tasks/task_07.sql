@@ -1,0 +1,19 @@
+-- Task 7 - Compter les clients par civilite
+--
+-- Instructions
+--
+--     Compter le nombre de clients pour chaque civilite.
+--     Nommer la colonne calculee nb_clients.
+--     Trier par nb_clients du plus nombreux au moins nombreux.
+--
+-- Resultat attendu
+--
+-- +----------+------------+
+-- | civilite | nb_clients |
+-- +----------+------------+
+-- | M.       |          8 |
+-- | Mme      |          7 |
+-- | Mlle     |          1 |
+-- +----------+------------+
+-- 3 rows in set (0.00 sec)
+

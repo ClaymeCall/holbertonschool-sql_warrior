@@ -1,0 +1,33 @@
+-- Task 1
+--
+-- Instructions
+--
+--     Afficher la liste de tous les vehicules :
+--         - Afficher le type du vehicule
+--         - Afficher le nombre de places
+--         - Afficher le modele
+--         - Afficher la couleur
+--         - Afficher l'immatriculation
+--     Attention aux noms des colonnes, ils doivent etre identiques au
+--     resultat attendu ci-dessous.
+--
+-- Resultat attendu
+--
+-- +------------+----------+-------------------+---------+---------+
+-- | libelle    | nbplaces | modele            | couleur | immat   |
+-- +------------+----------+-------------------+---------+---------+
+-- | Citadine   |        4 | Peugeot 208       | Rouge   | AA123BB |
+-- | Citadine   |        4 | Renault Clio      | Blanc   | CC456DD |
+-- | SUV        |        5 | Toyota Rav4       | Noir    | EE789FF |
+-- | Utilitaire |        2 | Ford Transit      | NULL    | GG741HH |
+-- | Minibus    |        7 | Mercedes Vito     | Gris    | II852JJ |
+-- | SUV        |        5 | Dacia Duster      | Bleu    | KK963LL |
+-- | Citadine   |        4 | Citroen C3        | Vert    | MM159NN |
+-- | SUV        |        5 | Volkswagen Tiguan | Noir    | OO357PP |
+-- | Utilitaire |        2 | Opel Vivaro       | Blanc   | QQ951RR |
+-- | Citadine   |        4 | Fiat Panda        | Jaune   | SS753TT |
+-- | SUV        |        5 | Hyundai Tucson    | Bleu    | UU654VV |
+-- | Utilitaire |        2 | Peugeot Expert    | Gris    | WW852XX |
+-- +------------+----------+-------------------+---------+---------+
+-- 12 rows in set (0.01 sec)
+

@@ -1,0 +1,28 @@
+-- Task 14 - Nombre d'echantillons par client
+--
+-- Instructions
+--
+--     Afficher chaque client avec son nombre d'echantillons.
+--     Inclure les clients meme s'ils n'ont aucun echantillon.
+--     Trier par nombre d'echantillons decroissant puis par nom.
+--
+-- Resultat attendu
+--
+-- +--------------------------+------------------------+
+-- | nom                      | nombre_echantillons    |
+-- +--------------------------+------------------------+
+-- | AeroTech Sud             |                      1 |
+-- | AgriSol Loire            |                      1 |
+-- | Bureau Etudes Vertis     |                      1 |
+-- | Cimenterie Ouest         |                      1 |
+-- | EauPure Bretagne         |                      1 |
+-- | Hôpital Saint-Luc        |                      1 |
+-- | IndusChem Atlantique     |                      1 |
+-- | Métropole Lyon           |                      1 |
+-- | Port Atlantique Services |                      1 |
+-- | Université Littorale     |                      1 |
+-- | Ville de Nantes          |                      1 |
+-- | VitiBio Gironde          |                      1 |
+-- +--------------------------+------------------------+
+-- 12 rows in set (0.01 sec)
+

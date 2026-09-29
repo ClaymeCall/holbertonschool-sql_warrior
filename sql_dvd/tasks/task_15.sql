@@ -1,0 +1,27 @@
+-- Task 15 - Trouver les clients ayant loue des films de realisateurs
+-- allemands en juin 2006
+--
+-- Instructions
+--
+--     Afficher les clients ayant loue un DVD realise par un realisateur
+--     allemand en juin 2006 (date de facture (location) en juin 2006).
+--     Afficher les colonnes suivantes :
+--         - nom du client
+--         - prenom du client
+--         - titre du dvd (film)
+--         - date de facture de location du film
+--     Trier par nom et prenom de client et par titre de film,
+--     respectivement dans cet ordre.
+--
+-- Resultat attendu
+--
+-- +----------+---------+---------------------+--------------+
+-- | nom      | prenom  | titre               | date_facture |
+-- +----------+---------+---------------------+--------------+
+-- | Bernard  | Julien  | Metropolis          | 2006-06-08   |
+-- | Fournier | Aurelie | Les Ailes du Desir  | 2006-06-29   |
+-- | Fournier | Aurelie | Metropolis          | 2006-06-29   |
+-- | Leroy    | Marc    | Les Ailes du Desir  | 2006-06-14   |
+-- +----------+---------+---------------------+--------------+
+-- 4 rows in set (0.00 sec)
+

@@ -1,0 +1,19 @@
+-- Task 16 - Analyses plus longues que la moyenne
+--
+-- Instructions
+--
+--     Afficher les analyses terminees dont la duree est superieure a la
+--     duree moyenne de toutes les analyses terminees.
+--     Afficher l'identifiant, le code echantillon et la duree en minutes.
+--     Trier de la plus longue a la plus courte.
+--
+-- Resultat attendu
+--
+-- +------------+-----------------+-----------------+
+-- | id_analyse | id_echantillon  | duree_minutes   |
+-- +------------+-----------------+-----------------+
+-- |          7 |               7 |             255 |
+-- |          2 |               2 |             105 |
+-- +------------+-----------------+-----------------+
+-- 2 rows in set (0.00 sec)
+

@@ -1,0 +1,28 @@
+-- Task 1 - Afficher les clients
+--
+-- Instructions
+--
+--     Afficher le nom, le secteur d'activite et la ville de tous les
+--     clients.
+--     Trier les resultats par nom de client.
+--
+-- Resultat attendu
+--
+-- +--------------------------+-----------------------+---------------+
+-- | nom                      | secteur_activite      | ville         |
+-- +--------------------------+-----------------------+---------------+
+-- | AeroTech Sud             | Aéronautique          | Toulouse      |
+-- | AgriSol Loire            | Agriculture           | Angers        |
+-- | Bureau Etudes Vertis     | Bureau d'études       | Paris         |
+-- | Cimenterie Ouest         | Industrie lourde      | Caen          |
+-- | EauPure Bretagne         | Traitement de l'eau   | Rennes        |
+-- | Hôpital Saint-Luc        | Santé                 | Tours         |
+-- | IndusChem Atlantique     | Industrie chimique    | Saint-Nazaire |
+-- | Métropole Lyon           | Collectivité          | Lyon          |
+-- | Port Atlantique Services | Logistique portuaire  | Saint-Nazaire |
+-- | Université Littorale     | Recherche publique    | Dunkerque     |
+-- | Ville de Nantes          | Collectivité          | Nantes        |
+-- | VitiBio Gironde          | Viticulture           | Bordeaux      |
+-- +--------------------------+-----------------------+---------------+
+-- 12 rows in set (0.00 sec)
+

@@ -1,0 +1,95 @@
+-- Task 9
+--
+-- Instructions
+--
+--     Creer une fonction utilisateur MySQL appelee date_fin_contrat.
+--     Cette fonction doit recevoir en parametre l'identifiant d'un contrat,
+--     puis retourner la date de fin du contrat.
+--
+--     La date de fin se calcule ainsi : date_effet + duree du contrat en mois
+--
+--     La fonction doit :
+--         - s'appeler date_fin_contrat,
+--         - prendre en parametre p_id_contrat INT,
+--         - retourner une valeur de type DATE,
+--         - recuperer la date d'effet et la duree du contrat depuis la
+--           table contrats,
+--         - retourner la date de fin calculee avec DATE_ADD,
+--         - retourner NULL si le contrat n'existe pas.
+--
+--     Test 1 - Contrat existant
+--         SELECT date_fin_contrat(1) AS date_fin;
+--
+-- Resultat attendu du test 1
+--
+-- +------------+
+-- | date_fin   |
+-- +------------+
+-- | 2025-01-01 |
+-- +------------+
+--
+--     Test 2 - Contrat avec duree de 24 mois
+--         SELECT date_fin_contrat(3) AS date_fin;
+--
+-- Resultat attendu du test 2
+--
+-- +------------+
+-- | date_fin   |
+-- +------------+
+-- | 2026-03-10 |
+-- +------------+
+--
+--     Test 3 - Contrat avec date recente
+--         SELECT date_fin_contrat(12) AS date_fin;
+--
+-- Resultat attendu du test 3
+--
+-- +------------+
+-- | date_fin   |
+-- +------------+
+-- | 2026-03-01 |
+-- +------------+
+--
+--     Test 4 - Utiliser la fonction dans une requete complete
+--         SELECT
+--             c.id,
+--             v.modele,
+--             c.date_effet,
+--             c.duree,
+--             date_fin_contrat(c.id) AS date_fin
+--         FROM contrats c
+--         INNER JOIN vehicules v
+--             ON c.vehicule = v.id
+--         ORDER BY c.id;
+--
+-- Resultat attendu du test 4
+--
+-- +----+-------------------+---------------------+-------+------------+
+-- | id | modele            | date_effet          | duree | date_fin   |
+-- +----+-------------------+---------------------+-------+------------+
+-- |  1 | Peugeot 208       | 2024-01-01 00:00:00 |    12 | 2025-01-01 |
+-- |  2 | Renault Clio      | 2024-02-01 00:00:00 |    12 | 2025-02-01 |
+-- |  3 | Toyota Rav4       | 2024-03-10 00:00:00 |    24 | 2026-03-10 |
+-- |  4 | Ford Transit      | 2024-04-15 00:00:00 |    12 | 2025-04-15 |
+-- |  5 | Mercedes Vito     | 2024-05-20 00:00:00 |    18 | 2025-11-20 |
+-- |  6 | Dacia Duster      | 2024-06-01 00:00:00 |    12 | 2025-06-01 |
+-- |  7 | Volkswagen Tiguan | 2024-06-15 00:00:00 |    12 | 2025-06-15 |
+-- |  8 | Opel Vivaro       | 2024-07-01 00:00:00 |    12 | 2025-07-01 |
+-- |  9 | Hyundai Tucson    | 2024-07-10 00:00:00 |     6 | 2025-01-10 |
+-- | 10 | Peugeot 208       | 2025-01-01 00:00:00 |    12 | 2026-01-01 |
+-- | 11 | Renault Clio      | 2025-02-01 00:00:00 |    12 | 2026-02-01 |
+-- | 12 | Toyota Rav4       | 2025-03-01 00:00:00 |    12 | 2026-03-01 |
+-- +----+-------------------+---------------------+-------+------------+
+--
+--     Test 5 - Contrat inexistant
+--         SELECT date_fin_contrat(999) AS date_fin;
+--
+-- Resultat attendu du test 5
+--
+-- +----------+
+-- | date_fin |
+-- +----------+
+-- | NULL     |
+-- +----------+
+-- 1 row in set (0.00 sec)
+

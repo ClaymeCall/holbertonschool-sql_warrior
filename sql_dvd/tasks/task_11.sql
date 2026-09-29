@@ -1,0 +1,40 @@
+-- Task 11 - Afficher les DVD avec leur genre
+--
+-- Instructions
+--
+--     Afficher chaque DVD avec le libelle complet de son genre.
+--     Utiliser une jointure entre dvd et genres_film.
+--     Trier par titre de film (dvd).
+--
+-- Resultat attendu
+--
+-- +-------------------------------------+-----------------+
+-- | titre                                | libelle_genre   |
+-- +-------------------------------------+-----------------+
+-- | Alien                                | Horreur         |
+-- | Avatar                               | Science-fiction |
+-- | Delicatessen                         | Comédie         |
+-- | Fight Club                           | Drame           |
+-- | Impitoyable                          | Western         |
+-- | Inception                            | Science-fiction |
+-- | Indiana Jones                        | Aventure        |
+-- | Interstellar                         | Science-fiction |
+-- | Jurassic Park                        | Aventure        |
+-- | Kill Bill                            | Action          |
+-- | Le Fabuleux Destin d Amelie Poulain  | Comédie         |
+-- | Le Grand Bleu                        | Drame           |
+-- | Le Voyage de Chihiro                 | Animation       |
+-- | Les Ailes du Desir                   | Drame           |
+-- | Les Temps modernes                   | Comédie         |
+-- | Metropolis                           | Science-fiction |
+-- | Mon Voisin Totoro                    | Animation       |
+-- | Paris Texas                          | Drame           |
+-- | Pulp Fiction                         | Thriller        |
+-- | Sans toit ni loi                     | Drame           |
+-- | Seven                                | Policier        |
+-- | Titanic                              | Romance         |
+-- | Total Recall                         | Science-fiction |
+-- | Tout sur ma mere                     | Drame           |
+-- +-------------------------------------+-----------------+
+-- 24 rows in set (0.00 sec)
+

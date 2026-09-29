@@ -1,0 +1,29 @@
+-- Task 7 - Lier les sites et les clients
+--
+-- Instructions
+--
+--     Afficher chaque site avec le nom du client associe.
+--     Afficher le nom du site, la ville du site, le type du site et le
+--     client.
+--     Trier par nom de client puis par nom de site.
+--
+-- Resultat attendu
+--
+-- +-----------------------------+---------------+---------------------+---------------------------+
+-- | nom_site                    | ville         | type_site           | client                    |
+-- +-----------------------------+---------------+---------------------+---------------------------+
+-- | Atelier Composites          | Toulouse      | site_industriel     | AeroTech Sud              |
+-- | Exploitation Loire Sud      | Angers        | site_agricole       | AgriSol Loire             |
+-- | Carrière Calcaire Ouest     | Caen          | site_industriel     | Cimenterie Ouest          |
+-- | Bassin Vilaine              | Rennes        | milieu_naturel      | EauPure Bretagne          |
+-- | Bloc Technique Hospitalier  | Tours         | batiment_sensible   | Hôpital Saint-Luc         |
+-- | Usine Zone Portuaire        | Saint-Nazaire | site_industriel     | IndusChem Atlantique      |
+-- | Station Rhône Centre        | Lyon          | station_traitement  | Métropole Lyon            |
+-- | Terminal Vrac Liquide       | Saint-Nazaire | zone_portuaire      | Port Atlantique Services  |
+-- | Plateforme Marine           | Dunkerque     | site_recherche      | Université Littorale      |
+-- | Parc Urbain Est             | Nantes        | zone_urbaine        | Ville de Nantes           |
+-- | Station Eau Nord            | Nantes        | station_traitement  | Ville de Nantes           |
+-- | Domaine des Graves          | Bordeaux      | site_agricole       | VitiBio Gironde           |
+-- +-----------------------------+---------------+---------------------+---------------------------+
+-- 12 rows in set (0.01 sec)
+

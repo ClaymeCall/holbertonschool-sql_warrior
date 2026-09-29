@@ -1,0 +1,22 @@
+-- Task 2 - Filtrer les demandes prioritaires
+--
+-- Instructions
+--
+--     Afficher les demandes dont la priorite est haute ou urgente.
+--     Afficher l'identifiant, la date, la priorite et l'objet de la
+--     demande.
+--     Trier par date de demande croissante.
+--
+-- Resultat attendu
+--
+-- +------------+--------------+----------+----------------------------------+
+-- | id_demande | date_demande | priorite | objet_demande                    |
+-- +------------+--------------+----------+----------------------------------+
+-- |          1 | 2025-01-10   | haute    | Contrôle qualité eau potable     |
+-- |          4 | 2025-02-02   | urgente  | Recherche métaux lourds          |
+-- |          6 | 2025-02-12   | haute    | Suivi hydrocarbures portuaires   |
+-- |          8 | 2025-03-09   | haute    | Mesure poussières carrière       |
+-- |         10 | 2025-03-20   | urgente  | Analyse solvants atelier         |
+-- +------------+--------------+----------+----------------------------------+
+-- 5 rows in set (0.00 sec)
+

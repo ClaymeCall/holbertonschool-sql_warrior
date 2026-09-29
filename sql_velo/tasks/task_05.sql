@@ -1,0 +1,20 @@
+-- Task 5
+--
+-- Instructions
+--
+--     Afficher le nom complet et l'email des utilisateurs.
+--     Afficher uniquement les colonnes mentionnees dans Resultat attendu.
+--
+-- Resultat attendu
+--
+-- +----------------+-------------------+
+-- | nom_complet    | email             |
+-- +----------------+-------------------+
+-- | Jean Dupont    | jean@email.com    |
+-- | Marie Martin   | marie@email.com   |
+-- | Lucas Bernard  | lucas@email.com   |
+-- | Emma Robert    | emma@email.com    |
+-- | Sophie Leroy   | sophie@email.com  |
+-- +----------------+-------------------+
+-- 5 rows in set (0.00 sec)
+

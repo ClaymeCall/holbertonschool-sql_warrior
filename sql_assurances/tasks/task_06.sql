@@ -1,0 +1,16 @@
+-- Task 6
+--
+-- Instructions
+--
+--     Afficher les deplacements prevus a Nice.
+--
+-- Resultat attendu
+--
+-- +---------+----------+------+
+-- | employe | vehicule | lieu |
+-- +---------+----------+------+
+-- |     207 |      108 | Nice |
+-- |     208 |      108 | Nice |
+-- +---------+----------+------+
+-- 2 rows in set (0.00 sec)
+

@@ -1,0 +1,20 @@
+-- Task 12 - Compter les analyses par analyste
+--
+-- Instructions
+--
+--     Afficher le nom complet de chaque employe ayant le role analyste.
+--     Compter le nombre d'analyses associees.
+--     Inclure les analystes meme s'ils n'ont aucune analyse.
+--     Trier par nombre d'analyses decroissant.
+--
+-- Resultat attendu
+--
+-- +----------------+-------------------+
+-- | analyste       | nombre_analyses   |
+-- +----------------+-------------------+
+-- | Samir Benali   |                4  |
+-- | Thomas Nguyen  |                4  |
+-- | Marco Rossi    |                4  |
+-- +----------------+-------------------+
+-- 3 rows in set (0.00 sec)
+

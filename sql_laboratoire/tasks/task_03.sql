@@ -1,0 +1,22 @@
+-- Task 3 - Trier les echantillons recus
+--
+-- Instructions
+--
+--     Afficher le code, la date de reception, la temperature et le statut
+--     des echantillons.
+--     Trier les resultats par date de reception decroissante.
+--     Limiter l'affichage aux 5 echantillons les plus recents.
+--
+-- Resultat attendu
+--
+-- +------------------+---------------------+------------------------+---------+
+-- | code_echantillon | date_reception      | temperature_reception  | statut  |
+-- +------------------+---------------------+------------------------+---------+
+-- | ECO-2025-012     | 2025-04-11 15:30:00 |                    8.8 | archive |
+-- | ECO-2025-011     | 2025-04-04 13:15:00 |                   11.0 | analyse |
+-- | ECO-2025-010     | 2025-03-21 18:10:00 |                    9.1 | recu    |
+-- | ECO-2025-009     | 2025-03-16 12:20:00 |                    6.7 | termine |
+-- | ECO-2025-008     | 2025-03-10 16:50:00 |                   12.3 | analyse |
+-- +------------------+---------------------+------------------------+---------+
+-- 5 rows in set (0.01 sec)
+

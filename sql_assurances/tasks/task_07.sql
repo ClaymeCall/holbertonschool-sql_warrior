@@ -1,0 +1,25 @@
+-- Task 7
+--
+-- Instructions
+--
+--     Afficher le nombre de deplacements par vehicule.
+--     Attention aux noms des colonnes, ils doivent etre identiques au
+--     resultat attendu ci-dessous.
+--     Attention a l'ordre dans lequel les donnees sont affichees : ca doit
+--     etre identique au resultat attendu ci-dessous.
+--
+-- Resultat attendu
+--
+-- +----------+-----------------+
+-- | vehicule | nb_deplacements |
+-- +----------+-----------------+
+-- |      105 |               3 |
+-- |      101 |               2 |
+-- |      103 |               2 |
+-- |      108 |               2 |
+-- |      104 |               1 |
+-- |      106 |               1 |
+-- |      110 |               1 |
+-- +----------+-----------------+
+-- 7 rows in set (0.00 sec)
+

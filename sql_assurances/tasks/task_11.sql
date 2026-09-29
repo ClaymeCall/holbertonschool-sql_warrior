@@ -1,0 +1,29 @@
+-- Task 11
+--
+-- Instructions
+--
+--     Creer une procedure appelee ajouter_employe permettant d'ajouter un
+--     employe.
+--         - La procedure doit prendre comme parametres :
+--             - le nom du nouvel employe (type VARCHAR(50)),
+--             - son prenom (type VARCHAR(50)),
+--             - son numero de permis (type VARCHAR(12))
+--         - Gerer la logique de l'ID du nouvel employe dans la procedure.
+--         - Le nom du nouvel employe doit etre enregistre en majuscule.
+--
+--     Test :
+--         CALL ajouter_employe('diallo', 'amina', '999888777666');
+--
+--         SELECT *
+--         FROM employes
+--         WHERE nom = 'DIALLO' AND prenom = 'amina';
+--
+-- Resultat attendu suite a l'execution des commandes ci-dessus
+--
+-- +-----+--------+--------+--------------+
+-- | id  | nom    | prenom | num_permis   |
+-- +-----+--------+--------+--------------+
+-- | 213 | DIALLO | Amina  | 999888777666 |
+-- +-----+--------+--------+--------------+
+-- 1 row in set (0.00 sec)
+

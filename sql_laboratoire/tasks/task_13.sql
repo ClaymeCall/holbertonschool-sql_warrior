@@ -1,0 +1,21 @@
+-- Task 13 - Reperer les parametres non conformes
+--
+-- Instructions
+--
+--     Afficher les parametres ayant au moins un resultat non conforme
+--     (c'est-a-dire la valeur de conforme dans la table resultat_analyse
+--     est egale a 0).
+--     Afficher le nom du parametre, l'unite et le seuil reglementaire.
+--     Ne pas afficher de doublons.
+--
+-- Resultat attendu
+--
+-- +----------------+--------+-----------------------+
+-- | nom_parametre  | unite  | seuil_reglementaire    |
+-- +----------------+--------+-----------------------+
+-- | plomb          | µg/L   |                 10.00 |
+-- | legionelles    | UFC/L  |               1000.00 |
+-- | arsenic        | µg/L   |                 10.00 |
+-- +----------------+--------+-----------------------+
+-- 3 rows in set (0.00 sec)
+

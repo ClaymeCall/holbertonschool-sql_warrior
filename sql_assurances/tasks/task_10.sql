@@ -1,0 +1,141 @@
+-- Task 10
+--
+-- Instructions
+--
+--     Creer une fonction utilisateur MySQL appelee vehicule_est_assure.
+--     Cette fonction doit recevoir l'identifiant d'un vehicule, et retourner :
+--         - 1 si le vehicule possede au moins un contrat d'assurance actif
+--           aujourd'hui,
+--         - 0 si le vehicule n'a aucun contrat actif.
+--
+--     Regle metier : un contrat est considere comme actif si la date du
+--     jour est comprise entre date_effet et
+--     date_effet + duree du contrat en mois.
+--
+--     La fonction doit :
+--         - s'appeler vehicule_est_assure,
+--         - prendre un parametre p_id_vehicule INT,
+--         - retourner un entier,
+--         - verifier si le vehicule possede un contrat actif,
+--         - retourner 1 si au moins un contrat actif existe,
+--         - retourner 0 sinon.
+--
+--     Avant de tester, executer le fichier ajout_de_data.sql (fourni dans
+--     ce dossier) afin d'ajouter 4 vehicules et leurs contrats
+--     d'assurance (contrats commencant en mai 2026 et se terminant en 2035):
+--         mysql -u root -p assurance_flotte < ajout_de_data.sql
+--
+--     Test 1 - Tester un vehicule assure
+--         SELECT vehicule_est_assure(103) AS est_assure;
+--     (le resultat depend de la date du jour)
+--
+-- Resultat attendu du test 1
+--
+-- +------------+
+-- | est_assure |
+-- +------------+
+-- |          0 |
+-- +------------+
+--
+--     Test 2 - Tester un vehicule jamais assure
+--         SELECT vehicule_est_assure(107) AS est_assure;
+--
+-- Resultat attendu du test 2
+--
+-- +------------+
+-- | est_assure |
+-- +------------+
+-- |          0 |
+-- +------------+
+--
+--     Test 3 - Tester un vehicule inexistant
+--         SELECT vehicule_est_assure(999) AS est_assure;
+--
+-- Resultat attendu du test 3
+--
+-- +------------+
+-- | est_assure |
+-- +------------+
+-- |          0 |
+-- +------------+
+--
+--     Test 4 - Verifier tous les vehicules
+--         SELECT
+--             v.id,
+--             v.modele,
+--             vehicule_est_assure(v.id) AS est_assure
+--         FROM vehicules v
+--         ORDER BY v.id;
+--
+-- Resultat attendu du test 4
+--
+-- +-----+------------------------+------------+
+-- | id  | modele                 | est_assure |
+-- +-----+------------------------+------------+
+-- | 101 | Peugeot 208            |          0 |
+-- | 102 | Renault Clio           |          0 |
+-- | 103 | Toyota Rav4            |          0 |
+-- | 104 | Ford Transit           |          0 |
+-- | 105 | Mercedes Vito          |          0 |
+-- | 106 | Dacia Duster           |          0 |
+-- | 107 | Citroen C3             |          0 |
+-- | 108 | Volkswagen Tiguan      |          0 |
+-- | 109 | Opel Vivaro            |          0 |
+-- | 110 | Fiat Panda             |          0 |
+-- | 111 | Hyundai Tucson         |          0 |
+-- | 112 | Peugeot Expert         |          0 |
+-- | 113 | Toyota Corolla Touring |          1 |
+-- | 114 | BMW Serie 3            |          1 |
+-- | 115 | Tesla Model 3          |          1 |
+-- | 116 | Smart Fortwo           |          1 |
+-- +-----+------------------------+------------+
+-- 16 rows in set (0.01 sec)
+--
+--     Test 5 - Afficher uniquement les vehicules non assures actuellement
+--         SELECT
+--             v.id,
+--             v.modele,
+--             v.immat
+--         FROM vehicules v
+--         WHERE vehicule_est_assure(v.id) = 0;
+--
+-- Resultat attendu du test 5
+--
+-- +-----+-------------------+---------+
+-- | id  | modele            | immat   |
+-- +-----+-------------------+---------+
+-- | 101 | Peugeot 208       | AA123BB |
+-- | 102 | Renault Clio      | CC456DD |
+-- | 103 | Toyota Rav4       | EE789FF |
+-- | 104 | Ford Transit      | GG741HH |
+-- | 105 | Mercedes Vito     | II852JJ |
+-- | 106 | Dacia Duster      | KK963LL |
+-- | 107 | Citroen C3        | MM159NN |
+-- | 108 | Volkswagen Tiguan | OO357PP |
+-- | 109 | Opel Vivaro       | QQ951RR |
+-- | 110 | Fiat Panda        | SS753TT |
+-- | 111 | Hyundai Tucson    | UU654VV |
+-- | 112 | Peugeot Expert    | WW852XX |
+-- +-----+-------------------+---------+
+-- 12 rows in set (0.00 sec)
+--
+--     Test 6 - Afficher uniquement les vehicules assures actuellement
+--         SELECT
+--             v.id,
+--             v.modele,
+--             v.immat
+--         FROM vehicules v
+--         WHERE vehicule_est_assure(v.id) = 1;
+--
+-- Resultat attendu du test 6
+--
+-- +-----+------------------------+----------+
+-- | id  | modele                 | immat    |
+-- +-----+------------------------+----------+
+-- | 113 | Toyota Corolla Touring | AB2026CD |
+-- | 114 | BMW Serie 3            | EF2026GH |
+-- | 115 | Tesla Model 3          | IJ2026KL |
+-- | 116 | Smart Fortwo           | MN2026OP |
+-- +-----+------------------------+----------+
+-- 4 rows in set (0.01 sec)
+

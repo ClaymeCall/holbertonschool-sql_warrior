@@ -1,0 +1,23 @@
+-- Task 9
+--
+-- Instructions
+--
+--     Afficher les velos loues au moins une fois et le nombre de fois
+--     qu'ils ont ete loues.
+--     Afficher uniquement les colonnes mentionnees dans Resultat attendu.
+--     Le nom de chaque colonne doit correspondre a celui mentionne dans
+--     Resultat attendu.
+--
+-- Resultat attendu
+--
+-- +------+-------------------+
+-- | code | nombre_locations  |
+-- +------+-------------------+
+-- | V001 | 1                 |
+-- | V002 | 1                 |
+-- | V004 | 1                 |
+-- | V005 | 1                 |
+-- | V006 | 1                 |
+-- +------+-------------------+
+-- 5 rows in set (0.00 sec)
+

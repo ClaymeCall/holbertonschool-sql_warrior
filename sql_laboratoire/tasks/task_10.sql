@@ -1,0 +1,36 @@
+-- Task 10 - Afficher tous les echantillons avec leur resultat eventuel
+--
+-- Instructions
+--
+--     Afficher tous les echantillons.
+--     Afficher la valeur mesuree si elle existe.
+--     Afficher NULL si aucun resultat n'existe.
+--     Afficher les colonnes mentionnees dans le resultat attendu.
+--     Trier par code d'echantillon.
+--
+-- Resultat attendu
+--
+-- +------------------+------------+-----------------+----------+
+-- | code_echantillon | id_analyse | valeur_mesuree  | conforme |
+-- +------------------+------------+-----------------+----------+
+-- | ECO-2025-001     |          1 |            7.20 |        1 |
+-- | ECO-2025-001     |          1 |            8.10 |        1 |
+-- | ECO-2025-002     |          2 |           14.50 |        0 |
+-- | ECO-2025-002     |          2 |            9.20 |        1 |
+-- | ECO-2025-003     |          3 |            NULL |     NULL |
+-- | ECO-2025-004     |          4 |            0.70 |        1 |
+-- | ECO-2025-004     |          4 |            0.40 |        1 |
+-- | ECO-2025-005     |          5 |            NULL |     NULL |
+-- | ECO-2025-006     |          6 |            NULL |     NULL |
+-- | ECO-2025-007     |          7 |         1250.00 |        0 |
+-- | ECO-2025-007     |          7 |          940.00 |        1 |
+-- | ECO-2025-008     |          8 |            NULL |     NULL |
+-- | ECO-2025-009     |          9 |          810.00 |        1 |
+-- | ECO-2025-009     |          9 |          760.00 |        1 |
+-- | ECO-2025-010     |         10 |            NULL |     NULL |
+-- | ECO-2025-011     |         11 |            NULL |     NULL |
+-- | ECO-2025-012     |         12 |           12.30 |        0 |
+-- | ECO-2025-012     |         12 |            8.50 |        1 |
+-- +------------------+------------+-----------------+----------+
+-- 18 rows in set (0.00 sec)
+

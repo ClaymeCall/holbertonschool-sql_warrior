@@ -1,0 +1,19 @@
+-- Task 3
+--
+-- Instructions
+--
+--     Afficher les vehicules jamais assures.
+--     Attention aux noms des colonnes, ils doivent etre identiques au
+--     resultat attendu ci-dessous.
+--
+-- Resultat attendu
+--
+-- +-----+----------------+
+-- | id  | modele         |
+-- +-----+----------------+
+-- | 107 | Citroen C3     |
+-- | 110 | Fiat Panda     |
+-- | 112 | Peugeot Expert |
+-- +-----+----------------+
+-- 3 rows in set (0.00 sec)
+

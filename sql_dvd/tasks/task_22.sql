@@ -1,0 +1,33 @@
+-- Task 22 - Chiffre d'affaires par facture
+--
+-- Instructions
+--
+--     Calculer le montant total de chaque facture a partir du tarif du
+--     type de location.
+--     Afficher id_facture, date_facture, nom, prenom et montant_total.
+--     Trier par montant decroissant.
+--
+-- Resultat attendu
+--
+-- +------------+--------------+----------+---------+---------------+
+-- | facture_id | date_facture | nom      | prenom  | montant_total |
+-- +------------+--------------+----------+---------+---------------+
+-- |          9 | 2006-07-02   | Garcia   | Claire  |         16.00 |
+-- |          7 | 2006-06-22   | Simon    | Anais   |         11.50 |
+-- |          3 | 2006-06-08   | Bernard  | Julien  |         10.50 |
+-- |          6 | 2006-06-19   | Moreau   | Sophie  |          9.00 |
+-- |          8 | 2006-06-27   | Laurent  | Hugo    |          9.00 |
+-- |         11 | 2006-06-29   | Fournier | Aurelie |          9.00 |
+-- |         13 | 2006-06-30   | Mercier  | Laura   |          8.70 |
+-- |         15 | 2006-06-18   | Robin    | Julie   |          8.50 |
+-- |         10 | 2006-07-05   | Roux     | Thomas  |          6.50 |
+-- |         12 | 2006-05-28   | Girard   | Nicolas |          6.50 |
+-- |          1 | 2006-06-03   | Martin   | Paul    |          6.00 |
+-- |          2 | 2006-06-04   | Durand   | Alice   |          6.00 |
+-- |          5 | 2006-06-14   | Leroy    | Marc    |          5.50 |
+-- |         14 | 2006-07-10   | Blanc    | Antoine |          5.50 |
+-- |          4 | 2006-06-12   | Petit    | Amelie  |          3.50 |
+-- |         16 | 2006-05-20   | Faure    | Kevin   |          2.80 |
+-- +------------+--------------+----------+---------+---------------+
+-- 16 rows in set (0.01 sec)
+

@@ -1,0 +1,21 @@
+-- Task 15
+--
+-- Instructions
+--
+--     Afficher le nombre de trajets effectue pour chaque voiture utilisee.
+--
+-- Resultat attendu
+--
+-- +-----+-------------------+---------------------------+
+-- | id  | modele            | nombre_total_de_trajets  |
+-- +-----+-------------------+---------------------------+
+-- | 105 | Mercedes Vito     |                        2 |
+-- | 101 | Peugeot 208       |                        1 |
+-- | 103 | Toyota Rav4       |                        1 |
+-- | 104 | Ford Transit      |                        1 |
+-- | 106 | Dacia Duster      |                        1 |
+-- | 108 | Volkswagen Tiguan |                        1 |
+-- | 110 | Fiat Panda        |                        1 |
+-- +-----+-------------------+---------------------------+
+-- 7 rows in set (0.00 sec)
+

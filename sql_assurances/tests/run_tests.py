@@ -33,7 +33,7 @@ TASKS_DIR = ROOT / "tasks"
 ENV_FILE = ROOT / ".env"
 CONTAINER = "mysql_dev"
 DB_USER = "student"
-DB_NAME = "location_velos"
+DB_NAME = "assurance_flotte"
 
 RED = "\033[31m"
 GREEN = "\033[32m"

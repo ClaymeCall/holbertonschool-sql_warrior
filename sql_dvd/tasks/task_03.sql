@@ -1,0 +1,25 @@
+-- Task 3 - Trouver les clients de Loire-Atlantique
+--
+-- Instructions
+--
+--     Afficher tous les champs des clients dont le code postal commence
+--     par 44.
+--     Trier par ville puis par nom.
+--
+-- Resultat attendu
+--
+-- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
+-- | id | code_client | civilite | prenom  | nom      | adresse              | code_postal | ville          | telephone  | date_naissance | abonne |
+-- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
+-- |  3 | C003        | M.       | Julien  | Bernard  | 5 rue Pasteur        | 44200       | Nantes         | 0240000003 | 1972-01-08     |      0 |
+-- |  2 | C002        | Mme      | Alice   | Durand   | 8 avenue Victor Hugo | 44100       | Nantes         | 0240000002 | 1984-09-21     |      1 |
+-- |  9 | C009        | Mme      | Claire  | Garcia   | 11 rue Foch          | 44000       | Nantes         | 0240000009 | 1969-02-18     |      1 |
+-- |  1 | C001        | M.       | Paul    | Martin   | 12 rue des Lilas     | 44000       | Nantes         | 0240000001 | 1965-04-12     |      1 |
+-- |  4 | C004        | Mme      | Amelie  | Petit    | 19 rue Nationale     | 44300       | Nantes         | 0240000004 | 1992-07-30     |      1 |
+-- | 15 | C015        | Mme      | Julie   | Robin    | 18 rue Haute         | 44000       | Nantes         | 0240000015 | 1989-09-09     |      1 |
+-- | 13 | C013        | Mme      | Laura   | Mercier  | 14 rue du Stade      | 44400       | Reze           | 0240000013 | 1995-01-20     |      0 |
+-- | 11 | C011        | Mme      | Aurelie | Fournier | 1 impasse Verte      | 44800       | Saint-Herblain | 0240000011 | 1981-05-29     |      1 |
+-- |  7 | C007        | Mlle     | Anais   | Simon    | 7 rue du Port        | 44600       | Saint-Nazaire  | 0240000007 | 2001-12-14     |      1 |
+-- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
+-- 9 rows in set (0.00 sec)
+

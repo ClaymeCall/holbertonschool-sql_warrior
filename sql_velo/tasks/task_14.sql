@@ -1,0 +1,12 @@
+-- Task 14
+--
+-- Instructions
+--
+--     Afficher les utilisateurs sans aucune location.
+--     Le resultat retourne par la requete doit correspondre au resultat
+--     attendu mentionne ci-dessous (attention au nom des colonnes).
+--
+-- Resultat attendu
+--
+-- Empty set (0.00 sec)
+

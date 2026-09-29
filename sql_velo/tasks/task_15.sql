@@ -1,0 +1,15 @@
+-- Task 15
+--
+-- Instructions
+--
+--     Afficher le nombre de locations par mois.
+--
+-- Resultat attendu
+--
+-- +------+-------------------+
+-- | mois | nombre_locations  |
+-- +------+-------------------+
+-- |    5 | 5                 |
+-- +------+-------------------+
+-- 1 row in set (0.00 sec)
+

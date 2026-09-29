@@ -1,0 +1,18 @@
+-- Task 12
+--
+-- Instructions
+--
+--     Afficher les utilisateurs ayant depense plus de 10 euros.
+--     Le resultat retourne par la requete doit correspondre au resultat
+--     attendu mentionne ci-dessous (attention au nom des colonnes).
+--
+-- Resultat attendu
+--
+-- +--------------+----------------+
+-- | nom_complet  | total_depense  |
+-- +--------------+----------------+
+-- | Jean Dupont  | 12.50          |
+-- | Emma Robert  | 15.00          |
+-- +--------------+----------------+
+-- 2 rows in set (0.00 sec)
+

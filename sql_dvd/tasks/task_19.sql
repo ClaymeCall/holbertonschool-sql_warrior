@@ -1,0 +1,28 @@
+-- Task 19 - Analyse croisee : nombre de clients par departement et
+-- civilite
+--
+-- Instructions
+--
+--     Extraire le departement a partir des deux premiers caracteres du
+--     code postal.
+--     Compter les clients par departement et civilite.
+--     Trier par departement et par civilite.
+--
+-- Resultat attendu
+--
+-- +-------------+----------+------------+
+-- | departement | civilite | nb_clients |
+-- +-------------+----------+------------+
+-- | 31          | M.       |          1 |
+-- | 33          | M.       |          1 |
+-- | 35          | M.       |          1 |
+-- | 44          | M.       |          2 |
+-- | 44          | Mlle     |          1 |
+-- | 44          | Mme      |          6 |
+-- | 49          | Mme      |          1 |
+-- | 67          | M.       |          1 |
+-- | 69          | M.       |          1 |
+-- | 75          | M.       |          1 |
+-- +-------------+----------+------------+
+-- 10 rows in set (0.01 sec)
+

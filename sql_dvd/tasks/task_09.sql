@@ -1,0 +1,23 @@
+-- Task 9 - Compter les realisateurs par pays
+--
+-- Instructions
+--
+--     Compter le nombre de realisateurs par pays.
+--     Trier du plus grand nombre au plus petit, puis par pays.
+--
+-- Resultat attendu
+--
+-- +-------------+-----------------+
+-- | pays        | nb_realisateurs |
+-- +-------------+-----------------+
+-- | ETATS-UNIS  |               4 |
+-- | FRANCE      |               3 |
+-- | ROYAUME-UNI |               3 |
+-- | ALLEMAGNE   |               2 |
+-- | CANADA      |               1 |
+-- | ESPAGNE     |               1 |
+-- | JAPON       |               1 |
+-- | PAYS-BAS    |               1 |
+-- +-------------+-----------------+
+-- 8 rows in set (0.00 sec)
+
