@@ -32,3 +32,15 @@
 -- +---------------+---------------------+-----------------+
 -- 19 rows in set (0.00 sec)
 
+SELECT
+  genres_manga.signification,
+  types_location.libelle,
+  COUNT(*) AS nombre_location
+FROM genres_manga
+
+INNER JOIN mangas ON mangas.code_genre = genres_manga.code_genre
+INNER JOIN table_location ON table_location.num_manga = mangas.num_manga
+INNER JOIN types_location ON table_location.code_type = types_location.code_type
+
+GROUP BY genres_manga.signification, types_location.libelle
+ORDER BY genres_manga.signification ASC, types_location.libelle ASC;
