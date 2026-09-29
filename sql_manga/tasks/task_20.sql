@@ -13,3 +13,13 @@
 -- +-----------+-----------------+
 -- 1 row in set (0.00 sec)
 
+SELECT
+  tl.code_type,
+  COUNT(*) AS nb_utilisations
+FROM table_location tl
+
+JOIN types_location t ON t.code_type = tl.code_type
+
+WHERE t.libelle = 'Retard régularisé'
+
+GROUP BY tl.code_type;
