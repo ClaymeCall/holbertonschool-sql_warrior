@@ -1,4 +1,5 @@
 -- Task 9
+-- Test ON
 --
 -- Instructions
 --
@@ -21,3 +22,8 @@
 -- +------+-------------------+
 -- 5 rows in set (0.00 sec)
 
+SELECT velos.code, COUNT(*) AS nombre_locations
+FROM velos
+INNER JOIN locations ON locations.velo_id = velos.id
+GROUP BY velos.code
+ORDER BY velos.code;
