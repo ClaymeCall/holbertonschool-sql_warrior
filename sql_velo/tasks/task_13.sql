@@ -1,4 +1,5 @@
 -- Task 13
+-- Test ON
 --
 -- Instructions
 --
@@ -24,3 +25,8 @@
 -- +------+------------------+
 -- 10 rows in set (0.00 sec)
 
+SELECT velos.code, COUNT(locations.id) AS total_locations
+FROM velos
+LEFT JOIN locations ON locations.velo_id = velos.id
+GROUP BY velos.id, velos.code
+ORDER BY total_locations DESC, velos.code;
