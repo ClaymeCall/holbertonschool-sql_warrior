@@ -1,4 +1,5 @@
 -- Task 7
+-- Test ON
 --
 -- Instructions
 --
@@ -18,3 +19,17 @@
 -- +----+-------------+------+---------------------+---------------------+---------+
 -- 1 row in set (0.00 sec)
 
+SELECT
+    locations.id,
+    utilisateurs.nom_complet,
+    velos.code,
+    locations.date_debut,
+    locations.date_fin,
+    paiements.montant
+FROM locations
+
+INNER JOIN utilisateurs ON utilisateurs.id = locations.utilisateur_id
+INNER JOIN velos ON velos.id = locations.velo_id
+INNER JOIN paiements ON paiements.location_id = locations.id
+
+WHERE locations.id = 1;
