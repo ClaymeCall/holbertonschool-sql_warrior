@@ -1,4 +1,5 @@
 -- Task 5
+-- Test ON
 --
 -- Instructions
 --
@@ -18,3 +19,4 @@
 -- +----------------+-------------------+
 -- 5 rows in set (0.00 sec)
 
+SELECT nom_complet, email FROM utilisateurs;
