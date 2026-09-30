@@ -1,4 +1,5 @@
 -- Task 11
+-- Test ON
 --
 -- Instructions
 --
@@ -19,3 +20,8 @@
 -- +----------------+-------------------+
 -- 5 rows in set (0.00 sec)
 
+SELECT utilisateurs.nom_complet, COUNT(locations.id) AS nombre_locations
+FROM utilisateurs
+LEFT JOIN locations ON locations.utilisateur_id = utilisateurs.id
+GROUP BY utilisateurs.id, utilisateurs.nom_complet
+ORDER BY utilisateurs.id;
