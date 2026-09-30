@@ -1,4 +1,5 @@
 -- Task 6
+-- Test ON
 --
 -- Instructions
 --
@@ -15,3 +16,4 @@
 -- +----+--------+
 -- 2 rows in set (0.00 sec)
 
+SELECT id, statut FROM locations WHERE statut = 'active';
