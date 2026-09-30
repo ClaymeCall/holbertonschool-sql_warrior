@@ -1,4 +1,5 @@
 -- Task 10
+-- Test ON
 --
 -- Instructions
 --
@@ -16,3 +17,7 @@
 -- +----+------+------------+-------------+----------------------+
 -- 2 rows in set (0.00 sec)
 
+SELECT id, code, type_velo, statut, station_actuelle_id
+FROM velos
+WHERE statut = 'maintenance'
+ORDER BY id;
