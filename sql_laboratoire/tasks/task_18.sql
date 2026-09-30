@@ -1,4 +1,5 @@
 -- Task 18 - Creer un statut lisible avec CASE
+-- Test ON
 --
 -- Instructions
 --
