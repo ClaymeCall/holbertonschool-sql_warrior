@@ -1,3 +1,5 @@
+SET NAMES utf8mb4;
+
 USE ecolab_analyse;
 
 INSERT INTO client (id_client, nom, secteur_activite, email_contact, telephone, ville) VALUES

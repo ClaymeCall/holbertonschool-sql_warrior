@@ -1,3 +1,5 @@
+SET NAMES utf8mb4;
+
 USE assurance_flotte;
 
 INSERT INTO types_vehicules VALUES

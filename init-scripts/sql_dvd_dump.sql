@@ -1,3 +1,5 @@
+SET NAMES utf8mb4;
+
 USE dvd;
 
 INSERT INTO genres_film (id, code_genre, libelle_genre) VALUES
