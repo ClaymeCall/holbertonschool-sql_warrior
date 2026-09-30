@@ -1,4 +1,5 @@
 -- Task 4
+-- Test ON
 --
 -- Instructions
 --
@@ -12,7 +13,10 @@
 -- +----+-------------+----------------+------------+---------------+---------------------+
 -- | id | nom_complet | email          | telephone  | mot_de_passe  | date_creation       |
 -- +----+-------------+----------------+------------+---------------+---------------------+
--- |  1 | Jean Dupont | jean@email.com | 0600000001 | hash1         | 2025-05-01 00:00:00 |
+-- |  1 | Jean Dupont | jean@email.com | 0600000001 | hash1         | 2026-09-30 07:35:01 |
 -- +----+-------------+----------------+------------+---------------+---------------------+
 -- 1 row in set (0.00 sec)
 
+SELECT id, nom_complet, email, telephone, mot_de_passe, date_creation
+FROM utilisateurs
+WHERE nom_complet LIKE 'J%';
