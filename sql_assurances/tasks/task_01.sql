@@ -32,3 +32,15 @@
 -- +------------+----------+-------------------+---------+---------+
 -- 12 rows in set (0.01 sec)
 
+SELECT
+  types_vehicules.libelle,
+  types_vehicules.nbplaces,
+  vehicules.modele,
+  vehicules.couleur,
+  vehicules.immat
+FROM vehicules
+
+INNER JOIN types_vehicules
+  ON vehicules.type_voiture = types_vehicules.id
+
+ORDER BY immat ASC;
