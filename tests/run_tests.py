@@ -13,7 +13,9 @@ never needs to be hardcoded here.
 Each task file is expected to contain:
     - A leading SQL-comment block ("-- ...") with the instructions and one
       or more expected-result ASCII tables (each under its own "Résultat
-      attendu" heading).
+      attendu" heading). Right after the task title, on its own line, a
+      "-- Test ON" / "-- Test OFF" marker says whether the task can be
+      checked this way at all.
     - A blank line.
     - The SQL answer to run: one or more ';'-terminated statements. SELECTs
       are matched, in order, against the expected tables parsed from the
@@ -22,9 +24,16 @@ Each task file is expected to contain:
       single transaction that is always rolled back afterwards, so write
       tasks never leave data behind for the next run.
 
-A task is skipped (not failed) when it has no SQL answer yet, or when the
-number of SELECTs in its answer doesn't match the number of expected tables
-in its header (the runner can't tell which output belongs to which table).
+A task is skipped (not failed) when it has no SQL answer yet, when its
+header is marked "Test OFF", or when the number of SELECTs in its answer
+doesn't match the number of expected tables in its header (the runner can't
+tell which output belongs to which table).
+
+"Test OFF" is for tasks that can't be checked against a fixed expected
+output at all, e.g. a task whose whole point is to trigger a MySQL error
+(a duplicate-key INSERT, a trigger that rejects a row): the runner would
+always report a hard failure for those, so mark their header "Test OFF" and
+the runner skips them instead.
 """
 
 import re
@@ -111,6 +120,17 @@ def parse_expected_tables(header):
 
 
 SELECT_RE = re.compile(r"^\s*SELECT\b", re.IGNORECASE)
+TEST_MARKER_RE = re.compile(r"^--\s*Test\s+(ON|OFF)\s*$", re.IGNORECASE)
+
+
+def is_test_enabled(header):
+    """Read the "-- Test ON" / "-- Test OFF" marker from a task header.
+    Defaults to enabled when no marker is present."""
+    for line in header.splitlines():
+        match = TEST_MARKER_RE.match(line.strip())
+        if match:
+            return match.group(1).upper() == "ON"
+    return True
 
 
 def split_statements(body):
@@ -177,6 +197,10 @@ def run_task(path, env, db_name):
     num = int(re.search(r"\d+", path.stem).group())
     text = path.read_text(encoding="utf-8")
     header, body = split_header_and_body(text)
+
+    if not is_test_enabled(header):
+        print(f"{YELLOW}SKIP{RESET} task {num:02d}: test turned off in header")
+        return "skip"
 
     if not body:
         print(f"{YELLOW}SKIP{RESET} task {num:02d}: no answer written yet")
