@@ -1,4 +1,5 @@
 -- Task 3
+-- Test ON
 --
 -- Instructions
 --
@@ -58,3 +59,13 @@
 -- +----+------------+
 -- 1 row in set (0.00 sec)
 
+SELECT id, statut FROM velos WHERE id = 1;
+
+START TRANSACTION;
+UPDATE velos SET statut = 'maintenance' WHERE id = 1;
+
+SELECT id, statut FROM velos WHERE id = 1;
+
+ROLLBACK;
+
+SELECT id, statut FROM velos WHERE id = 1;
