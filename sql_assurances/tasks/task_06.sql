@@ -15,3 +15,10 @@
 -- +---------+----------+------+
 -- 2 rows in set (0.00 sec)
 
+SELECT
+  employe,
+  vehicule,
+  lieu
+FROM deplacements
+
+WHERE lieu = 'Nice';
