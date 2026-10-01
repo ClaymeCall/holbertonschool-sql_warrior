@@ -1,4 +1,5 @@
 -- Task 9 - Compter les realisateurs par pays
+-- Test ON
 --
 -- Instructions
 --
@@ -21,3 +22,4 @@
 -- +-------------+-----------------+
 -- 8 rows in set (0.00 sec)
 
+SELECT pays, COUNT(*) AS nb_realisateurs FROM realisateurs GROUP BY pays ORDER BY nb_realisateurs DESC, pays;
