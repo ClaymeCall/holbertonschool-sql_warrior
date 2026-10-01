@@ -27,3 +27,10 @@
 -- +-------------------+---------------+
 -- 12 rows in set (0.00 sec)
 
+SELECT
+  vehicules.modele AS `modele`,
+  assureurs.nom AS `assureur`
+FROM vehicules
+
+INNER JOIN contrats ON vehicules.id = contrats.vehicule
+INNER JOIN assureurs ON contrats.assureur = assureurs.id;
