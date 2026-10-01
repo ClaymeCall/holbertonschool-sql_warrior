@@ -1,5 +1,6 @@
 -- Task 19 - Analyse croisee : nombre de clients par departement et
 -- civilite
+-- Test ON
 --
 -- Instructions
 --
@@ -26,3 +27,10 @@
 -- +-------------+----------+------------+
 -- 10 rows in set (0.01 sec)
 
+SELECT
+    LEFT(code_postal, 2) AS departement,
+    civilite,
+    COUNT(*) AS nb_clients
+FROM clients
+GROUP BY departement, civilite
+ORDER BY departement, civilite;
