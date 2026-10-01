@@ -1,4 +1,5 @@
 -- Task 10 - Calculer la duree moyenne des films par genre
+-- Test ON
 --
 -- Instructions
 --
@@ -26,3 +27,10 @@
 -- +-----------------+---------------+
 -- 11 rows in set (0.00 sec)
 
+SELECT
+    genres_film.libelle_genre,
+    ROUND(AVG(dvd.duree_minutes), 1) AS duree_moyenne
+FROM dvd
+INNER JOIN genres_film ON dvd.genre_id = genres_film.id
+GROUP BY genres_film.id, genres_film.libelle_genre
+ORDER BY duree_moyenne DESC, genres_film.libelle_genre;
