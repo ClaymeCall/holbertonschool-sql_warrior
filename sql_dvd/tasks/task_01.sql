@@ -1,4 +1,5 @@
 -- Task 1 - Lister les clients
+-- Test ON
 --
 -- Instructions
 --
@@ -29,3 +30,4 @@
 -- +----------+---------+----------------+
 -- 16 rows in set (0.00 sec)
 
+SELECT nom, prenom, ville FROM clients ORDER BY nom;
