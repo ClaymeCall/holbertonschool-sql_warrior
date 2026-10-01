@@ -18,3 +18,15 @@
 -- +------------+-----------------+-----------------+
 -- 2 rows in set (0.00 sec)
 
+SELECT
+  analyse.id_analyse,
+  analyse.id_echantillon,
+  TIMESTAMPDIFF(MINUTE, analyse.date_debut, analyse.date_fin) AS duree_minutes
+FROM analyse
+WHERE analyse.statut = 'terminee'
+  AND TIMESTAMPDIFF(MINUTE, analyse.date_debut, analyse.date_fin) > (
+    SELECT AVG(TIMESTAMPDIFF(MINUTE, date_debut, date_fin))
+    FROM analyse
+    WHERE statut = 'terminee'
+  )
+ORDER BY duree_minutes DESC;
