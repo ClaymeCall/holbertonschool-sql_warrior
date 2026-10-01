@@ -29,3 +29,13 @@
 -- +------------+-------+
 -- 12 rows in set (0.00 sec)
 
+SELECT
+  types_vehicules.libelle AS `libelle`,
+  COUNT(vehicules.id) AS `total`
+FROM types_vehicules
+
+LEFT JOIN vehicules ON types_vehicules.id = vehicules.type_voiture
+
+GROUP BY types_vehicules.libelle
+
+ORDER BY `total` DESC;
