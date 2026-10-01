@@ -1,4 +1,5 @@
 -- Task 17 - Identifier le meilleur client en nombre de DVD loues
+-- Test ON
 --
 -- Instructions
 --
@@ -35,3 +36,13 @@
 -- +-------------+----------+---------+--------------+
 -- 16 rows in set (0.00 sec)
 
+SELECT
+    clients.code_client,
+    clients.nom,
+    clients.prenom,
+    COUNT(*) AS nb_dvd_loues
+FROM locations
+INNER JOIN factures ON factures.id = locations.facture_id
+INNER JOIN clients ON clients.id = factures.client_id
+GROUP BY clients.id, clients.code_client, clients.nom, clients.prenom
+ORDER BY nb_dvd_loues DESC, clients.nom, clients.prenom;
