@@ -1,4 +1,5 @@
 -- Task 22 - Chiffre d'affaires par facture
+-- Test ON
 --
 -- Instructions
 --
@@ -31,3 +32,15 @@
 -- +------------+--------------+----------+---------+---------------+
 -- 16 rows in set (0.01 sec)
 
+SELECT
+    factures.id AS facture_id,
+    factures.date_facture,
+    clients.nom,
+    clients.prenom,
+    SUM(types_location.tarif) AS montant_total
+FROM factures
+INNER JOIN clients ON clients.id = factures.client_id
+INNER JOIN locations ON locations.facture_id = factures.id
+INNER JOIN types_location ON types_location.id = locations.type_location_id
+GROUP BY factures.id, factures.date_facture, clients.nom, clients.prenom
+ORDER BY montant_total DESC, factures.id;
