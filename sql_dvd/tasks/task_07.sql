@@ -1,4 +1,5 @@
 -- Task 7 - Compter les clients par civilite
+-- Test ON
 --
 -- Instructions
 --
@@ -17,3 +18,4 @@
 -- +----------+------------+
 -- 3 rows in set (0.00 sec)
 
+SELECT civilite, COUNT(*) AS nb_clients FROM clients GROUP BY civilite ORDER BY nb_clients DESC;
