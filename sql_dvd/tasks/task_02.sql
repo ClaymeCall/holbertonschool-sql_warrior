@@ -1,4 +1,5 @@
 -- Task 2 - Lister les DVD par titre
+-- Test ON
 --
 -- Instructions
 --
@@ -37,3 +38,4 @@
 -- +-------------------------------------+--------------+
 -- 24 rows in set (0.00 sec)
 
+SELECT titre, annee_sortie FROM dvd ORDER BY titre;
