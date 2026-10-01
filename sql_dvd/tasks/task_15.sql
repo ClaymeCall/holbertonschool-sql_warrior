@@ -1,5 +1,6 @@
 -- Task 15 - Trouver les clients ayant loue des films de realisateurs
 -- allemands en juin 2006
+-- Test ON
 --
 -- Instructions
 --
@@ -25,3 +26,16 @@
 -- +----------+---------+---------------------+--------------+
 -- 4 rows in set (0.00 sec)
 
+SELECT
+    clients.nom,
+    clients.prenom,
+    dvd.titre,
+    factures.date_facture
+FROM locations
+INNER JOIN factures ON factures.id = locations.facture_id
+INNER JOIN clients ON clients.id = factures.client_id
+INNER JOIN dvd ON dvd.id = locations.dvd_id
+INNER JOIN realisateurs ON realisateurs.id = dvd.realisateur_id
+WHERE realisateurs.pays = 'ALLEMAGNE'
+    AND factures.date_facture BETWEEN '2006-06-01' AND '2006-06-30'
+ORDER BY clients.nom, clients.prenom, dvd.titre;
