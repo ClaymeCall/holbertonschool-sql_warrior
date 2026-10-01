@@ -1,4 +1,5 @@
 -- Task 12 - Afficher les DVD avec realisateur, pays et genre
+-- Test ON
 --
 -- Instructions
 --
@@ -39,3 +40,13 @@
 -- +-------------------------------------+-----------+-------------+-------------+-----------------+
 -- 24 rows in set (0.01 sec)
 
+SELECT
+    dvd.titre,
+    realisateurs.nom,
+    realisateurs.prenom,
+    realisateurs.pays,
+    genres_film.libelle_genre
+FROM dvd
+INNER JOIN realisateurs ON dvd.realisateur_id = realisateurs.id
+INNER JOIN genres_film ON dvd.genre_id = genres_film.id
+ORDER BY dvd.titre;
