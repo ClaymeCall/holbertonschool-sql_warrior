@@ -24,3 +24,13 @@
 -- +----------+-----------------+
 -- 7 rows in set (0.00 sec)
 
+SELECT
+  vehicules.id AS `vehicule`,
+  COUNT(deplacements.debut_dep) AS `nb_deplacements`
+FROM vehicules
+
+LEFT JOIN deplacements ON vehicules.id = deplacements.vehicule
+
+GROUP BY vehicules.id
+
+ORDER BY `nb_deplacements` DESC;
