@@ -15,3 +15,12 @@
 -- +-----+---------+--------+
 -- 2 rows in set (0.00 sec)
 
+SELECT
+  employes.id,
+  employes.nom,
+  employes.prenom
+FROM employes
+
+LEFT JOIN deplacements ON employes.id = deplacements.employe
+
+WHERE deplacements.employe IS NULL;
