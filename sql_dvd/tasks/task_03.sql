@@ -1,4 +1,5 @@
 -- Task 3 - Trouver les clients de Loire-Atlantique
+-- Test ON
 --
 -- Instructions
 --
@@ -23,3 +24,4 @@
 -- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
 -- 9 rows in set (0.00 sec)
 
+SELECT * FROM clients WHERE code_postal LIKE '44%' ORDER BY ville, nom;
