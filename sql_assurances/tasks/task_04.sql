@@ -16,3 +16,4 @@
 -- +-----------------+
 -- 1 row in set (0.01 sec)
 
+SELECT COUNT(*) AS total_vehicules FROM vehicules;
