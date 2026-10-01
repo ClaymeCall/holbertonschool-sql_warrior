@@ -1,4 +1,5 @@
 -- Task 5 - Trouver les clients nes dans les annees 70
+-- Test ON
 --
 -- Instructions
 --
@@ -18,3 +19,4 @@
 -- +----+-------------+----------+---------+---------+-----------------+-------------+----------+------------+----------------+--------+
 -- 4 rows in set (0.00 sec)
 
+SELECT * FROM clients WHERE date_naissance BETWEEN '1970-01-01' AND '1979-12-31' ORDER BY date_naissance;
