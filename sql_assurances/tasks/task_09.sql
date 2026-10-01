@@ -94,3 +94,47 @@
 -- +----------+
 -- 1 row in set (0.00 sec)
 
+DROP FUNCTION IF EXISTS date_fin_contrat;
+
+DELIMITER //
+
+CREATE FUNCTION date_fin_contrat(p_id_contrat INT)
+RETURNS DATE
+READS SQL DATA
+
+BEGIN
+  DECLARE v_date_effet DATETIME;
+  DECLARE v_duree INT;
+  DECLARE v_date_fin DATE;
+
+  SET v_date_effet = (SELECT date_effet FROM contrats WHERE contrats.id = p_id_contrat);
+  SET v_duree = (SELECT duree FROM contrats WHERE contrats.id = p_id_contrat);
+
+  SET v_date_fin = DATE_ADD(v_date_effet, INTERVAL v_duree MONTH);
+
+  RETURN v_date_fin;
+
+END
+
+//
+
+DELIMITER ;
+
+SELECT date_fin_contrat(1) AS date_fin;
+
+SELECT date_fin_contrat(3) AS date_fin;
+
+SELECT date_fin_contrat(12) AS date_fin;
+
+SELECT
+    c.id,
+    v.modele,
+    c.date_effet,
+    c.duree,
+    date_fin_contrat(c.id) AS date_fin
+FROM contrats c
+INNER JOIN vehicules v
+    ON c.vehicule = v.id
+ORDER BY c.id;
+
+SELECT date_fin_contrat(999) AS date_fin;
