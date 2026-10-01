@@ -1,4 +1,5 @@
 -- Task 21 - Genres les plus loues
+-- Test ON
 --
 -- Instructions
 --
@@ -25,3 +26,11 @@
 -- +-----------------+--------------+
 -- 11 rows in set (0.00 sec)
 
+SELECT
+    genres_film.libelle_genre,
+    COUNT(*) AS nb_locations
+FROM locations
+INNER JOIN dvd ON dvd.id = locations.dvd_id
+INNER JOIN genres_film ON genres_film.id = dvd.genre_id
+GROUP BY genres_film.libelle_genre
+ORDER BY nb_locations DESC, genres_film.libelle_genre;
