@@ -1,4 +1,5 @@
 -- Task 14 - Afficher les locations avec client et realisateur
+-- Test ON
 --
 -- Instructions
 --
@@ -45,3 +46,13 @@
 -- +-------------------------------------+-----------------------+---------------------+
 -- 30 rows in set (0.00 sec)
 
+SELECT
+    dvd.titre,
+    CONCAT(clients.civilite, ' ', clients.nom, ' ', clients.prenom) AS client,
+    CONCAT(realisateurs.nom, ' ', realisateurs.prenom) AS realisateur
+FROM clients
+INNER JOIN factures ON factures.client_id = clients.id
+INNER JOIN locations ON locations.facture_id = factures.id
+INNER JOIN dvd ON dvd.id = locations.dvd_id
+INNER JOIN realisateurs ON realisateurs.id = dvd.realisateur_id
+ORDER BY dvd.titre;
