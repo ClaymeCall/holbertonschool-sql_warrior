@@ -28,3 +28,37 @@
 -- +-----+--------+--------+--------------+
 -- 1 row in set (0.00 sec)
 
+DROP PROCEDURE IF EXISTS ajouter_employe;
+
+DELIMITER //
+
+CREATE PROCEDURE ajouter_employe(p_nom VARCHAR(50), p_prenom VARCHAR(50), p_num_permis VARCHAR(12))
+MODIFIES SQL DATA
+
+BEGIN
+  DECLARE v_id INT;
+  SET v_id = (SELECT IFNULL(MAX(id), 0) + 1 FROM employes);
+
+  INSERT INTO employes (id, nom, prenom, num_permis)
+  VALUES (
+    v_id,
+    UPPER(p_nom),
+    CONCAT(UPPER(LEFT(p_prenom, 1)), LOWER(SUBSTRING(p_prenom, 2))),
+    p_num_permis
+  );
+
+END
+
+//
+
+DELIMITER ;
+
+START TRANSACTION;
+
+CALL ajouter_employe('diallo', 'amina', '999888777666');
+
+SELECT *
+FROM employes
+WHERE nom = 'DIALLO' AND prenom = 'amina';
+
+ROLLBACK;
