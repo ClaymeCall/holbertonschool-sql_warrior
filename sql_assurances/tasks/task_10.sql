@@ -140,3 +140,58 @@
 -- +-----+------------------------+----------+
 -- 4 rows in set (0.01 sec)
 
+DROP FUNCTION IF EXISTS vehicule_est_assure;
+
+DELIMITER //
+
+CREATE FUNCTION vehicule_est_assure(p_id_vehicule INT)
+RETURNS INT
+READS SQL DATA
+
+BEGIN
+  DECLARE v_assure_oui_non INT;
+  DECLARE v_nb_assurances_actives INT;
+
+  SET v_nb_assurances_actives = (
+    SELECT COUNT(*)
+    FROM contrats
+    WHERE contrats.vehicule = p_id_vehicule
+      AND NOW() BETWEEN contrats.date_effet
+        AND DATE_ADD(contrats.date_effet, INTERVAL contrats.duree MONTH)
+  );
+
+  SET v_assure_oui_non = IF(v_nb_assurances_actives > 0, 1, 0);
+
+  RETURN v_assure_oui_non;
+END
+
+//
+
+DELIMITER ;
+
+SELECT vehicule_est_assure(103) AS est_assure;
+
+SELECT vehicule_est_assure(107) AS est_assure;
+
+SELECT vehicule_est_assure(999) AS est_assure;
+
+SELECT
+    v.id,
+    v.modele,
+    vehicule_est_assure(v.id) AS est_assure
+FROM vehicules v
+ORDER BY v.id;
+
+SELECT
+    v.id,
+    v.modele,
+    v.immat
+FROM vehicules v
+WHERE vehicule_est_assure(v.id) = 0;
+
+SELECT
+    v.id,
+    v.modele,
+    v.immat
+FROM vehicules v
+WHERE vehicule_est_assure(v.id) = 1;
