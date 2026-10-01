@@ -1,4 +1,5 @@
 -- Task 4 - Trouver les clientes dont le prenom commence par A
+-- Test ON
 --
 -- Instructions
 --
@@ -18,3 +19,4 @@
 -- +----+-------------+----------+---------+----------+----------------------+-------------+----------------+------------+----------------+--------+
 -- 4 rows in set (0.00 sec)
 
+SELECT * FROM clients WHERE civilite IN ('Mme', 'Mlle') AND prenom LIKE 'A%' ORDER BY prenom;
