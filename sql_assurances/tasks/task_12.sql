@@ -30,3 +30,35 @@
 --           AND fin_dep = '2027-07-01 18:00:00'
 --           AND lieu = 'Bordeaux';
 
+DROP TRIGGER IF EXISTS trg_verifier_places;
+
+DELIMITER //
+
+CREATE TRIGGER trg_verifier_places
+BEFORE INSERT ON deplacements
+FOR EACH ROW
+BEGIN
+  DECLARE v_seat_count INT;
+  DECLARE v_current_count INT;
+
+  SELECT types_vehicules.nbplaces
+  INTO v_seat_count
+  FROM vehicules
+  INNER JOIN types_vehicules ON vehicules.type_voiture = types_vehicules.id
+  WHERE vehicules.id = NEW.vehicule;
+
+  SELECT COUNT(*)
+  INTO v_current_count
+  FROM deplacements
+  WHERE vehicule = NEW.vehicule
+    AND debut_dep = NEW.debut_dep
+    AND fin_dep = NEW.fin_dep;
+
+  IF v_current_count >= v_seat_count THEN
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Capacite du vehicule depassee';
+  END IF;
+END
+
+//
+
+DELIMITER ;
