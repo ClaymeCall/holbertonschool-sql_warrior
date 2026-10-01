@@ -1,4 +1,5 @@
 -- Task 6 - Trouver les DVD de moins de deux heures
+-- Test ON
 --
 -- Instructions
 --
@@ -23,3 +24,4 @@
 -- +--------------------+---------------+
 -- 9 rows in set (0.00 sec)
 
+SELECT titre, duree_minutes FROM dvd WHERE duree_minutes < 120 ORDER BY duree_minutes;
