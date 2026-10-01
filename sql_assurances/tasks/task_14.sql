@@ -14,3 +14,15 @@
 -- +---------------+---------------------+
 -- 1 row in set (0.00 sec)
 
+SELECT
+  assureurs.nom AS `nom`,
+  COUNT(contrats.id) AS `nombre_de_contrats`
+FROM assureurs
+
+INNER JOIN contrats ON contrats.assureur = assureurs.id
+
+GROUP BY assureurs.nom
+
+ORDER BY `nombre_de_contrats` DESC
+
+LIMIT 1;
