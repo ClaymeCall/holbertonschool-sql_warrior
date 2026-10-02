@@ -38,3 +38,17 @@
 -- +------------------+------------+-------------------+
 -- 18 rows in set (0.00 sec)
 
+SELECT
+  echantillon.code_echantillon,
+  analyse.id_analyse,
+  CASE resultat_analyse.conforme
+    WHEN 1 THEN 'conforme'
+    WHEN 0 THEN 'non conforme'
+    ELSE 'en attente'
+  END AS `statut_resultat`
+FROM echantillon
+
+LEFT JOIN analyse ON analyse.id_echantillon = echantillon.id_echantillon
+LEFT JOIN resultat_analyse ON resultat_analyse.id_analyse = analyse.id_analyse
+
+ORDER BY analyse.id_analyse ASC, resultat_analyse.id_resultat ASC;
