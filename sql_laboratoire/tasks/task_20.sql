@@ -27,3 +27,14 @@
 -- +------------+------------------+------------------+-------------+
 -- 6 rows in set (0.01 sec)
 
+SELECT
+  analyse.id_analyse,
+  echantillon.code_echantillon,
+  TIMESTAMPDIFF(MINUTE, analyse.date_debut, analyse.date_fin) AS duree_minutes,
+  RANK() OVER (
+    ORDER BY TIMESTAMPDIFF(MINUTE, analyse.date_debut, analyse.date_fin) DESC
+  ) AS rang_duree
+FROM analyse
+INNER JOIN echantillon ON echantillon.id_echantillon = analyse.id_echantillon
+WHERE analyse.statut = 'terminee'
+ORDER BY duree_minutes DESC;
