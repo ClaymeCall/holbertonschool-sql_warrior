@@ -1,4 +1,5 @@
 -- Task 13 - Reperer les parametres non conformes
+-- Test ON
 --
 -- Instructions
 --
@@ -19,3 +20,9 @@
 -- +----------------+--------+-----------------------+
 -- 3 rows in set (0.00 sec)
 
+SELECT DISTINCT p.nom_parametre, p.unite, p.seuil_reglementaire
+FROM resultat_analyse r
+INNER JOIN analyse a ON a.id_analyse = r.id_analyse
+INNER JOIN methode_analyse m ON m.id_methode = a.id_methode
+INNER JOIN parametre_analyse p ON p.id_parametre = m.id_parametre
+WHERE r.conforme = 0;
