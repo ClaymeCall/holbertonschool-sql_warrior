@@ -1,4 +1,5 @@
 -- Task 5 - Calculer une temperature moyenne
+-- Test ON
 --
 -- Instructions
 --
@@ -15,3 +16,4 @@
 -- +----------------------+
 -- 1 row in set (0.00 sec)
 
+SELECT ROUND(AVG(temperature_reception), 2) AS temperature_moyenne FROM echantillon;
