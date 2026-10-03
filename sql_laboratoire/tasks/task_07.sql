@@ -1,4 +1,5 @@
 -- Task 7 - Lier les sites et les clients
+-- Test ON
 --
 -- Instructions
 --
@@ -27,3 +28,7 @@
 -- +-----------------------------+---------------+---------------------+---------------------------+
 -- 12 rows in set (0.01 sec)
 
+SELECT s.nom_site, s.ville, s.type_site, c.nom AS client
+FROM site s
+INNER JOIN client c ON s.id_client = c.id_client
+ORDER BY c.nom, s.nom_site;
