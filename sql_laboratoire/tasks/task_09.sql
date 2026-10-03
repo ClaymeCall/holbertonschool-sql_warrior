@@ -1,4 +1,5 @@
 -- Task 9 - Afficher les analyses avec leur methode
+-- Test ON
 --
 -- Instructions
 --
@@ -26,3 +27,8 @@
 -- +------------+------------------+-------------------------------+-----------+
 -- 12 rows in set (0.01 sec)
 
+SELECT a.id_analyse, e.code_echantillon, m.nom_methode, a.statut
+FROM analyse a
+INNER JOIN echantillon e ON a.id_echantillon = e.id_echantillon
+INNER JOIN methode_analyse m ON a.id_methode = m.id_methode
+ORDER BY a.id_analyse;
