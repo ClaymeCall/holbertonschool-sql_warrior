@@ -1,4 +1,5 @@
 -- Task 11 - Resultats complets des analyses
+-- Test ON
 --
 -- Instructions
 --
@@ -31,3 +32,13 @@
 -- +------------------------+------------------------------+------------------+----------------+-----------------+----------+
 -- 12 rows in set (0.01 sec)
 
+SELECT c.nom AS nom_client, si.nom_site, e.code_echantillon, p.nom_parametre, r.valeur_mesuree, r.conforme
+FROM client c
+INNER JOIN site si ON si.id_client = c.id_client
+INNER JOIN prelevement pr ON pr.id_site = si.id_site
+INNER JOIN echantillon e ON e.id_prelevement = pr.id_prelevement
+INNER JOIN analyse a ON a.id_echantillon = e.id_echantillon
+INNER JOIN resultat_analyse r ON r.id_analyse = a.id_analyse
+INNER JOIN methode_analyse m ON m.id_methode = a.id_methode
+INNER JOIN parametre_analyse p ON p.id_parametre = m.id_parametre
+ORDER BY c.nom, e.code_echantillon, r.id_resultat;
