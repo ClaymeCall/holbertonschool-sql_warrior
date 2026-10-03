@@ -1,4 +1,5 @@
 -- Task 2 - Filtrer les demandes prioritaires
+-- Test ON
 --
 -- Instructions
 --
@@ -20,3 +21,7 @@
 -- +------------+--------------+----------+----------------------------------+
 -- 5 rows in set (0.00 sec)
 
+SELECT id_demande, date_demande, priorite, objet_demande
+FROM demande_analyse
+WHERE priorite IN ('haute', 'urgente')
+ORDER BY date_demande ASC;
