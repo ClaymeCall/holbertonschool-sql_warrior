@@ -1,4 +1,5 @@
 -- Task 10 - Afficher tous les echantillons avec leur resultat eventuel
+-- Test ON
 --
 -- Instructions
 --
@@ -34,3 +35,8 @@
 -- +------------------+------------+-----------------+----------+
 -- 18 rows in set (0.00 sec)
 
+SELECT e.code_echantillon, a.id_analyse, r.valeur_mesuree, r.conforme
+FROM echantillon e
+LEFT JOIN analyse a ON a.id_echantillon = e.id_echantillon
+LEFT JOIN resultat_analyse r ON r.id_analyse = a.id_analyse
+ORDER BY e.code_echantillon, r.id_resultat;
