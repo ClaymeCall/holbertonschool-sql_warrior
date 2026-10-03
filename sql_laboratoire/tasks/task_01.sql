@@ -1,4 +1,5 @@
 -- Task 1 - Afficher les clients
+-- Test ON
 --
 -- Instructions
 --
@@ -26,3 +27,4 @@
 -- +--------------------------+-----------------------+---------------+
 -- 12 rows in set (0.00 sec)
 
+SELECT nom, secteur_activite, ville FROM client ORDER BY nom;
