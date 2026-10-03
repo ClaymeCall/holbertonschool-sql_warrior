@@ -29,3 +29,24 @@
 -- +------------------------+------------------------------+------------------+----------------+-----------+-----------------------+-----------------+----------+
 -- 12 rows in set (0.00 sec)
 
+CREATE OR REPLACE VIEW vue_resultats_complets AS
+SELECT
+  client.nom AS `client`,
+  site.nom_site,
+  echantillon.code_echantillon,
+  parametre_analyse.nom_parametre,
+  parametre_analyse.unite,
+  parametre_analyse.seuil_reglementaire,
+  resultat_analyse.valeur_mesuree,
+  resultat_analyse.conforme
+FROM client
+INNER JOIN site ON site.id_client = client.id_client
+INNER JOIN prelevement ON prelevement.id_site = site.id_site
+INNER JOIN echantillon ON echantillon.id_prelevement = prelevement.id_prelevement
+INNER JOIN analyse ON analyse.id_echantillon = echantillon.id_echantillon
+INNER JOIN resultat_analyse ON resultat_analyse.id_analyse = analyse.id_analyse
+INNER JOIN methode_analyse ON methode_analyse.id_methode = analyse.id_methode
+INNER JOIN parametre_analyse ON parametre_analyse.id_parametre = methode_analyse.id_parametre
+ORDER BY resultat_analyse.id_resultat ASC;
+
+SELECT * FROM vue_resultats_complets;
