@@ -1,4 +1,5 @@
 -- Task 8 - Afficher les echantillons avec leur type
+-- Test ON
 --
 -- Instructions
 --
@@ -25,3 +26,7 @@
 -- +------------------+-----------------------+
 -- 12 rows in set (0.00 sec)
 
+SELECT e.code_echantillon, t.libelle_type
+FROM echantillon e
+INNER JOIN type_echantillon t ON e.id_type_echantillon = t.id_type_echantillon
+ORDER BY e.code_echantillon;
