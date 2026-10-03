@@ -1,4 +1,5 @@
 -- Task 14 - Nombre d'echantillons par client
+-- Test ON
 --
 -- Instructions
 --
@@ -26,3 +27,10 @@
 -- +--------------------------+------------------------+
 -- 12 rows in set (0.01 sec)
 
+SELECT c.nom, COUNT(e.id_echantillon) AS nombre_echantillons
+FROM client c
+LEFT JOIN demande_analyse d ON d.id_client = c.id_client
+LEFT JOIN prelevement pr ON pr.id_demande = d.id_demande
+LEFT JOIN echantillon e ON e.id_prelevement = pr.id_prelevement
+GROUP BY c.id_client, c.nom
+ORDER BY nombre_echantillons DESC, c.nom;
