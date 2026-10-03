@@ -45,7 +45,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 INIT_SCRIPTS_DIR = REPO_ROOT / "init-scripts"
 ENV_FILE = REPO_ROOT / ".env"
 CONTAINER = "mysql_dev"
-DB_USER = "student"
+DB_USER = "root"
 
 RED = "\033[31m"
 GREEN = "\033[32m"
@@ -146,7 +146,7 @@ def run_transaction(body, env, db_name):
         "mysql",
         "-h127.0.0.1",
         f"-u{DB_USER}",
-        f"-p{env['MYSQL_PASSWORD']}",
+        f"-p{env['MYSQL_ROOT_PASSWORD']}",
         "--default-character-set=utf8mb4",
         "-B",
         db_name,
