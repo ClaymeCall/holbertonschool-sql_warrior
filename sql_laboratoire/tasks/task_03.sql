@@ -1,4 +1,5 @@
 -- Task 3 - Trier les echantillons recus
+-- Test ON
 --
 -- Instructions
 --
@@ -20,3 +21,7 @@
 -- +------------------+---------------------+------------------------+---------+
 -- 5 rows in set (0.01 sec)
 
+SELECT code_echantillon, date_reception, temperature_reception, statut
+FROM echantillon
+ORDER BY date_reception DESC
+LIMIT 5;
