@@ -1,4 +1,5 @@
 -- Task 4 - Compter les echantillons
+-- Test ON
 --
 -- Instructions
 --
@@ -14,3 +15,4 @@
 -- +----------------------+
 -- 1 row in set (0.01 sec)
 
+SELECT COUNT(*) AS nombre_echantillons FROM echantillon;
