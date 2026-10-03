@@ -1,4 +1,5 @@
 -- Task 15 - Duree moyenne des analyses terminees par methode
+-- Test ON
 --
 -- Instructions
 --
@@ -25,3 +26,9 @@
 -- +-------------------------------+--------------------------+
 -- 6 rows in set (0.00 sec)
 
+SELECT m.nom_methode, ROUND(AVG(TIMESTAMPDIFF(MINUTE, a.date_debut, a.date_fin)), 2) AS duree_moyenne_minutes
+FROM analyse a
+INNER JOIN methode_analyse m ON m.id_methode = a.id_methode
+WHERE a.statut = 'terminee'
+GROUP BY m.id_methode, m.nom_methode
+ORDER BY duree_moyenne_minutes DESC;
