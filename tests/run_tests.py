@@ -119,7 +119,7 @@ def parse_expected_tables(header):
     return tables
 
 
-SELECT_RE = re.compile(r"^\s*SELECT\b", re.IGNORECASE)
+SELECT_RE = re.compile(r"^\s*(SELECT|WITH)\b", re.IGNORECASE)
 TEST_MARKER_RE = re.compile(r"^--\s*Test\s+(ON|OFF)\s*$", re.IGNORECASE)
 
 
